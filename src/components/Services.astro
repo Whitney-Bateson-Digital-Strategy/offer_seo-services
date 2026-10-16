@@ -1,5 +1,5 @@
 ---
-import { SERVICES } from "../data/page";
+import { SERVICES, INCLUDED } from "../data/page";
 import Cta from "./Cta.astro";
 ---
 <section id="services" class="services">
@@ -28,6 +28,20 @@ import Cta from "./Cta.astro";
           </details>
           <div class="svc-cta"><Cta label={s.cta} service={s.name} /></div>
         </article>
+      ))}
+    </div>
+
+    <div class="included" id="included">
+      <div class="inc-intro">
+        <p class="eyebrow">{INCLUDED.eyebrow}</p>
+        <h3 set:html={INCLUDED.heading} />
+        <p set:html={INCLUDED.intro} />
+      </div>
+      {INCLUDED.items.map((x) => (
+        <div class="inc">
+          <h4 set:html={x.title} />
+          <p set:html={x.body} />
+        </div>
       ))}
     </div>
   </div>
