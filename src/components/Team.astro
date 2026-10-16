@@ -1,6 +1,7 @@
 ---
 import { TEAM } from "../data/page";
 import { asset } from "../lib";
+import Cta from "./Cta.astro";
 ---
 <section id="team" class="team">
   <div class="wrap">
@@ -27,5 +28,6 @@ import { asset } from "../lib";
         <figcaption>{TEAM.quote.attribution}</figcaption>
       </figure>
     )}
+    <div class="center"><Cta label={TEAM.cta} /></div>
   </div>
 </section>

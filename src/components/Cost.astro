@@ -33,6 +33,14 @@ const c = COST.calculator;
     </div>
   </div>
 
+  <div class="wrap">
+    <p class="audits-label">{COST.audits.heading}</p>
+    <ul class="audits">
+      {COST.audits.items.map((a) => (
+        <li class="audit"><b>{a.stat}</b><p set:html={a.body} /></li>
+      ))}
+    </ul>
+  </div>
 </section>
 
 <script>

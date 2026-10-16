@@ -13,24 +13,17 @@ import Cta from "./Cta.astro";
       {SERVICES.items.map((s) => (
         <article class="svc" id={s.id}>
           <div class="svc-head">
-            <p class="svc-name">{s.name}</p>
-            <h3 set:html={s.headline} />
             <span class="pill">{s.format}</span>
+            <h3>{s.name}</h3>
+            <p class="svc-tagline" set:html={s.tagline} />
           </div>
-          <dl class="svc-facts">
-            <dt>Best for</dt><dd set:html={s.bestFor} />
-            <dt>What it does</dt><dd set:html={s.does} />
-          </dl>
-          <div class="svc-includes">
-            <p class="svc-label">What’s included</p>
-            <ul class="checks">{s.points.map((p) => <li set:html={p} />)}</ul>
-            {s.note && <p class="svc-note" set:html={s.note} />}
-          </div>
+          <p class="svc-summary" set:html={s.summary} />
+          <p class="svc-fit" set:html={s.fit} />
           <details class="svc-more">
-            <summary>More about {s.name}</summary>
+            <summary>What’s included</summary>
             <div class="svc-more-body">
-              <p set:html={s.summary} />
               <p set:html={s.body} />
+              <ul class="checks">{s.points.map((p) => <li set:html={p} />)}</ul>
             </div>
           </details>
           <div class="svc-cta"><Cta label={s.cta} service={s.name} /></div>
@@ -55,7 +48,7 @@ import Cta from "./Cta.astro";
 </section>
 
 <script>
-  // Opening the details on one card opens them on all three, so they can be compared side by side.
+  // Opening "What's included" on one card opens it on all three, so they can be compared side by side.
   const toggles = [...document.querySelectorAll<HTMLDetailsElement>(".svc-more")];
   let syncing = false;
   toggles.forEach((d) =>

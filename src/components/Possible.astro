@@ -1,0 +1,20 @@
+---
+import { POSSIBLE } from "../data/page";
+---
+<section id="possible" class="possible">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">{POSSIBLE.eyebrow}</p>
+      <h2 class="h2" set:html={POSSIBLE.heading} />
+      <p class="lede" set:html={POSSIBLE.intro} />
+    </div>
+    <div class="cards">
+      {POSSIBLE.quotes.map((q) => (
+        <figure class="card quote-card">
+          <blockquote set:html={q.text} />
+          <figcaption>{q.who}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

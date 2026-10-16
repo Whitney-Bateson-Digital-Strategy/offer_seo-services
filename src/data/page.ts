@@ -54,6 +54,32 @@ export const COST = {
     "People are already searching for the kind of help you offer. When your practice doesn’t show up, or your website doesn’t make the next step clear, those searches turn into consultations somewhere else.",
     "That loss never appears on a report, which is what makes it so easy to put off.",
   ],
+  // Real, anonymized findings from recent WBDS audits (sources noted for each).
+  audits: {
+    heading: "From our recent audits",
+    items: [
+      {
+        // SEO Audit_ Functional Vitality.pdf
+        stat: "2,100",
+        body: "searches a month for “what causes extreme fatigue,” a question with almost no competition. The nutritionist we audited was mostly found by people who already knew her name.",
+      },
+      {
+        // SEO Audit_ Functional Vitality.pdf
+        stat: "3 states",
+        body: "where Google was showing a Midwest practice to searchers: New York, Michigan, and Pennsylvania. Nothing on her site said where she worked.",
+      },
+      {
+        // SEO Audit_ Bone Health Dietitian.pdf (33 of 149 clicks)
+        stat: "22%",
+        body: "of a dietitian’s search clicks for the whole year came from one blog post. Most of her other pages sat on page 2 of Google.",
+      },
+      {
+        // SEO Adair transcript
+        stat: "148 pages",
+        body: "of a gut health dietitian’s website were blocked from Google’s results, until the audit found them.",
+      },
+    ],
+  },
   calculator: {
     heading: "What could search be worth to your practice?",
     intro: "Adjust the numbers to match your practice for a rough idea.",
@@ -69,42 +95,14 @@ export const COST = {
   },
 };
 
-/* Proof: one big metric, findings from individual audits, and client reactions.
-   The quotes are verbatim from audit calls, anonymized; confirm each client is happy for
-   their words to be used before launch. Sources are noted for each item. */
-export const PROOF = {
-  eyebrow: "From our recent audits",
+/* Verbatim client reactions from recent audit calls, anonymized. Confirm each client is happy
+   for their words to be used before launch (sources noted for each). */
+export const POSSIBLE = {
+  eyebrow: "After their free audit",
   heading: "Most practices are <em>closer than they think.</em>",
   // SEO proposals in the audit folder: 6 of 8 practices.
-  big: {
-    stat: "6 of 8",
-    body: "practices we recently reviewed already had enough trust with Google for new pages to rank quickly. What they needed was a clear plan for what to publish and where.",
-  },
-  findingsLabel: "What individual audits found",
-  findings: [
-    {
-      // SEO Audit_ Functional Vitality.pdf
-      stat: "2,100",
-      body: "searches a month for “what causes extreme fatigue,” a question with almost no competition. The nutritionist we audited was mostly found by people who already knew her name.",
-    },
-    {
-      // SEO Audit_ Functional Vitality.pdf
-      stat: "3 states",
-      body: "where Google was showing a Midwest practice to searchers: New York, Michigan, and Pennsylvania. Nothing on her site said where she worked.",
-    },
-    {
-      // SEO Audit_ Bone Health Dietitian.pdf (33 of 149 clicks)
-      stat: "22%",
-      body: "of a dietitian’s search clicks for the whole year came from one blog post. Most of her other pages sat on page 2 of Google.",
-    },
-    {
-      // SEO Adair transcript
-      stat: "148 pages",
-      body: "of a gut health dietitian’s website were blocked from Google’s results, until the audit found them.",
-    },
-  ],
-  note: "Findings from individual practices’ audits, shared anonymously. They describe where each practice started, not guaranteed results.",
-  quotesLabel: "What practitioners said after their audit",
+  intro:
+    "In 6 of the last 8 practices we reviewed, the website already had enough trust with Google for new pages to rank quickly. It mostly needed a clear plan for what to publish and where.",
   quotes: [
     {
       // SEO Holly transcript
@@ -126,6 +124,8 @@ export const PROOF = {
 
 export const APPROACH = {
   eyebrow: "Our approach",
+  intro:
+    "You shouldn’t have to figure all of this out between client sessions. We can help you understand what needs attention and take on the work to improve it.",
   heading: "Start with the clients <em>you want more of.</em>",
   body: [
     "SEO means helping people find your business through search. For your practice, its value comes from what happens next: someone asks about working with you, books a consultation, or joins your program.",
@@ -150,15 +150,13 @@ export const APPROACH = {
 export const SERVICES = {
   heading: "Here’s how <em>we can help.</em>",
   intro:
-    "Each service solves a different problem. Some practices need one; many combine two. Your free audit will tell you where to start.",
+    "Some practices need a focused project. Others need consistent content and support. We’ll help you choose a starting point based on your website and what you want to grow.",
   items: [
     {
       id: "local-seo",
       name: "Local SEO",
-      headline: "Get found in your area",
-      bestFor: "Practices that want more clients from a specific city, region, or service area.",
-      does: "Shows Google where you work and what you offer there, so local searchers find you instead of the practice down the road.",
       format: "3-month project",
+      tagline: "Reach more clients in the areas you serve",
       summary:
         "A focused three-month project for practices that want more inquiries from a particular city or region.",
       body: "We improve how your website presents your services and where you offer them. For eligible practices, we also work on your Google Business Profile so people searching locally can get a clearer picture of your business.",
@@ -167,15 +165,14 @@ export const SERVICES = {
         "Create service pages for the locations you want to reach.",
         "Update your Google Business Profile and publish relevant posts where appropriate.",
       ],
+      fit: "A good starting point if you want more local appointments or clients within a specific service area.",
       cta: "Get my free local SEO audit",
     },
     {
       id: "content",
       name: "Growth Content Engine",
-      headline: "Get found for your expertise",
-      bestFor: "Practitioners with plenty to say and little time to write.",
-      does: "Turns your knowledge into articles that answer the questions your future clients are already searching.",
       format: "Ongoing monthly",
+      tagline: "Put your expertise to work on your website",
       summary: "Ongoing monthly content support for practitioners who have plenty to say and little time to write.",
       body: "We research relevant topics, talk with you about your perspective, and turn that knowledge into articles for your website. You review the content, and we handle the writing, preparation, and publishing.",
       points: [
@@ -183,16 +180,14 @@ export const SERVICES = {
         "Create useful articles in your voice, informed by your expertise.",
         "Connect readers with relevant services and a clear next step.",
       ],
+      fit: "A good fit if you want to build a useful body of content over time without taking on a monthly writing project yourself.",
       cta: "Get my free content audit",
     },
     {
       id: "ai-visibility",
       name: "AI Visibility",
-      headline: "Get found in AI search",
-      bestFor: "Practices that want to show up when people ask ChatGPT or Google’s AI for help.",
-      does: "Makes who you help and what you offer clear to search tools, including AI assistants.",
-      note: "Placement in AI answers can’t be guaranteed.",
       format: "One-time project",
+      tagline: "Help search tools understand your practice",
       summary:
         "A one-time project to make your website’s information clearer and more accessible to search tools, including those used in AI-assisted search.",
       body: "We clarify the details about your business, services, and expertise, develop answers to common client questions with your input, and review the behind-the-scenes setup that helps search tools read your site.",
@@ -201,15 +196,10 @@ export const SERVICES = {
         "Publish useful answers that reflect your knowledge and approach.",
         "Check for barriers that could prevent search tools from accessing your content.",
       ],
+      fit: "A good starting point if you want to prepare your existing website for discovery through tools such as ChatGPT and Google’s AI search features. Placement in their answers cannot be guaranteed.",
       cta: "Get my free AI visibility audit",
     },
   ],
-};
-
-export const NOT_SURE = {
-  heading: "Not sure which SEO service <em>fits your practice?</em>",
-  body: "Tell us where you want your business to go, and we’ll recommend the best place to start.",
-  cta: "Get my free SEO audit",
 };
 
 export const INCLUDED = {
@@ -234,17 +224,14 @@ export const STEPS = {
   heading: "Let’s take a look at <em>your website first.</em>",
   items: [
     {
-      when: "Today",
       title: "Tell us a little about your business",
       body: "Share your website and answer a few short questions about who you serve and what you’d like to improve.",
     },
     {
-      when: "Within 7 days",
       title: "Receive your free audit",
       body: "We’ll review your site, practice, and goals, and send you a video walking you through the top opportunities we see, why they matter, and where we suggest focusing first.",
     },
     {
-      when: "When you’re ready",
       title: "Discuss next steps on a strategy call",
       body: "After your audit, you’re invited to book a live strategy call with us to discuss how we would approach SEO for your business, including costs and timelines.",
     },
@@ -277,6 +264,7 @@ export const TEAM = {
     text: "This was fabulous. It helped validate some things for me… and really met me where I was at.",
     attribution: "Registered dietitian in private practice, after her free audit",
   },
+  cta: "Get my free audit",
 };
 
 export const FAQ = {
