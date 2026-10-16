@@ -204,17 +204,17 @@ export const SERVICES = {
 
 export const INCLUDED = {
   eyebrow: "Included with every project",
-  heading: "We also look at what happens <em>after someone finds you.</em>",
+  heading: "Clicks are nice. <em>Clients are the point.</em>",
   intro:
-    "When we begin working on your website, we include a reporting dashboard and an initial review of the steps visitors take to contact you.",
+    "A lot of SEO stops at traffic. But a visitor who can’t find your booking link, or isn’t sure what to do next, never becomes a client. So every project includes a reporting dashboard and a review of the path people take to reach you. We measure inquiries, not just visits.",
   items: [
     {
-      title: "A clearer view of website activity",
-      body: "Your custom dashboard brings together visits and key actions we can track, such as contact form submissions and clicks to call, email, or book. This helps us look beyond visitor numbers and see whether people are taking steps toward working with you.",
+      title: "A dashboard that tracks what counts",
+      body: "See your visits alongside the actions that lead to new clients: contact form submissions and clicks to call, email, or book. You’ll know whether the work is bringing in inquiries, not just traffic.",
     },
     {
-      title: "A check of the path to becoming a client",
-      body: "We review your website for confusing next steps, hard-to-find contact information, and broken or unclear buttons. We address straightforward issues within the agreed work and flag larger changes that may need separate attention.",
+      title: "A clear path from visitor to client",
+      body: "We check your site for confusing next steps, hard-to-find contact details, and broken or unclear buttons. Straightforward fixes are part of the agreed work, and we’ll flag anything bigger so there are no surprises.",
     },
   ],
 };
