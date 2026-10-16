@@ -8,9 +8,9 @@ import { POSSIBLE } from "../data/page";
       <h2 class="h2" set:html={POSSIBLE.heading} />
       <p class="lede" set:html={POSSIBLE.intro} />
     </div>
-    <div class="cards">
+    <div class="bubbles">
       {POSSIBLE.quotes.map((q) => (
-        <figure class="card quote-card">
+        <figure class="bubble-quote">
           <blockquote set:html={q.text} />
           <figcaption>{q.who}</figcaption>
         </figure>

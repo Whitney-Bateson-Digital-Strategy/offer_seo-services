@@ -164,12 +164,15 @@ ul{ list-style:none; }
 /* ---------------- hero ---------------- */
 .hero{ background:linear-gradient(160deg, var(--anchor) 0%, var(--anchor) 45%, var(--dark) 100%); color:var(--bg); padding:80px 0; }
 .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
-.hero-photo{ position:relative; max-width:480px; justify-self:end; width:100%; }
-/* Photo sits in a soft lime frame that follows the arch shape. */
+.hero-photo{ position:relative; isolation:isolate; max-width:460px; justify-self:end; width:calc(100% - 20px); margin:0 20px 20px 0; }
+/* Rounded-square photo with a soft lime outline offset behind it. */
+.hero-photo::after{
+  content:''; position:absolute; inset:0; z-index:-1; transform:translate(20px, 20px);
+  border:3px solid var(--soft-lime); border-radius:22px;
+}
 .hero-photo img{
-  display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; object-position:50% 45%;
-  padding:14px; background:var(--soft-lime);
-  border-radius:50% 50% 28px 28px / 50% 50% 28px 28px; box-shadow:0 24px 60px rgba(0,0,0,.28);
+  display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; object-position:50% 40%;
+  border-radius:22px; box-shadow:0 24px 60px rgba(0,0,0,.28);
 }
 .hero .eyebrow{ color:var(--accent); }
 .hero h1{ color:#fff; margin-bottom:1.3rem; max-width:14ch; }
@@ -183,8 +186,9 @@ ul{ list-style:none; }
 @media (max-width:900px){
   .hero{ padding:56px 0; }
   .hero-grid{ grid-template-columns:1fr; gap:40px; }
-  .hero-photo{ order:-1; justify-self:center; max-width:520px; }
-  .hero-photo img{ aspect-ratio:4/3; padding:10px; border-radius:200px 200px 22px 22px; }
+  .hero-photo{ order:-1; justify-self:start; max-width:520px; margin:0 14px 14px 0; }
+  .hero-photo::after{ transform:translate(14px, 14px); border-radius:18px; }
+  .hero-photo img{ aspect-ratio:4/3; border-radius:18px; }
 }
 
 /* ---------------- problem ---------------- */
@@ -253,10 +257,33 @@ ul{ list-style:none; }
 @media (max-width:540px){ .calc{ padding:26px 20px; } .calc-result b{ font-size:32px; } }
 
 /* ---------------- what's possible ---------------- */
-.quote-card{ display:flex; flex-direction:column; justify-content:space-between; gap:1.4rem; }
-.quote-card blockquote{ font-family:var(--display); font-style:italic; font-size:21px; line-height:1.45; color:var(--anchor); }
-.quote-card blockquote::before{ content:'“'; display:block; font-size:56px; line-height:.6; color:var(--anchor); margin-bottom:.4rem; }
-.quote-card figcaption{ font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+/* Client quotes as speech bubbles: three colors, middle one dropped for rhythm. */
+.bubbles{ display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; max-width:var(--content); margin:0 auto; align-items:start; }
+.bubble-quote blockquote{
+  position:relative; border-radius:24px 24px 24px 6px; padding:30px 28px 28px;
+  font-family:var(--display); font-style:italic; font-size:20px; line-height:1.45;
+  background:var(--anchor); color:#fff; box-shadow:0 14px 34px rgba(1,57,64,.14);
+}
+.bubble-quote blockquote::before{
+  content:'“'; display:block; font-style:normal; font-size:72px; line-height:.55; height:30px; color:var(--accent);
+}
+/* Tail at the bottom-left, pointing to who said it. */
+.bubble-quote blockquote::after{
+  content:''; position:absolute; left:0; bottom:-14px; border-left:22px solid var(--anchor); border-bottom:14px solid transparent;
+}
+.bubble-quote figcaption{
+  margin:24px 0 0 6px; padding-left:18px; position:relative;
+  font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);
+}
+.bubble-quote figcaption::before{ content:''; position:absolute; left:0; top:4px; width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 2px var(--anchor); }
+.bubble-quote:nth-child(2) blockquote{ background:var(--soft-lime); color:var(--anchor); }
+.bubble-quote:nth-child(2) blockquote::before{ color:var(--anchor); }
+.bubble-quote:nth-child(2) blockquote::after{ border-left-color:var(--soft-lime); }
+.bubble-quote:nth-child(3) blockquote{ background:var(--neutral); color:var(--anchor); }
+.bubble-quote:nth-child(3) blockquote::before{ color:var(--anchor); }
+.bubble-quote:nth-child(3) blockquote::after{ border-left-color:var(--neutral); }
+@media (min-width:901px){ .bubble-quote:nth-child(2){ margin-top:44px; } }
+@media (max-width:900px){ .bubbles{ grid-template-columns:1fr; max-width:560px; gap:24px; } }
 
 /* ---------------- approach ---------------- */
 .approach{ background:var(--soft-lime); }
