@@ -35,7 +35,7 @@ export const HERO = {
 };
 
 export const PROBLEM = {
-  heading: "You want your website to bring in more business. <em>But where do you start?</em>",
+  heading: "You want your website to bring in more business. But where do you start?",
   intro:
     "Maybe referrals keep you busy some months and leave you wondering where the next client will come from in others. You have a website, but you’re not sure how much it’s actually helping.",
   points: [
@@ -48,8 +48,7 @@ export const PROBLEM = {
 
 /* DRAFT COPY: new section, not in the original brief. */
 export const COST = {
-  eyebrow: "The cost of waiting",
-  heading: "Every month you’re hard to find, <em>someone else gets the call.</em>",
+  heading: "When you’re hard to find, people book with whoever they find first.",
   body: [
     "People are already searching for the kind of help you offer. When your practice doesn’t show up, or your website doesn’t make the next step clear, those searches turn into consultations somewhere else.",
     "That loss never appears on a report, which is what makes it so easy to put off.",
@@ -98,7 +97,6 @@ export const COST = {
 /* Verbatim client reactions from recent audit calls, anonymized. Confirm each client is happy
    for their words to be used before launch (sources noted for each). */
 export const POSSIBLE = {
-  eyebrow: "After their free audit",
   heading: "Most practices are <em>closer than they think.</em>",
   // SEO proposals in the audit folder: 6 of 8 practices.
   intro:
@@ -123,7 +121,6 @@ export const POSSIBLE = {
 };
 
 export const APPROACH = {
-  eyebrow: "Our approach",
   intro:
     "You shouldn’t have to figure all of this out between client sessions. We can help you understand what needs attention and take on the work to improve it.",
   heading: "Start with the clients <em>you want more of.</em>",
@@ -148,9 +145,9 @@ export const APPROACH = {
 };
 
 export const SERVICES = {
-  heading: "Be the practice they find, <em>wherever they’re looking.</em>",
+  heading: "Here’s how we can help.",
   intro:
-    "Some people search their city. Some search their symptoms. More and more simply ask AI. Each service puts you in front of a different kind of search. Choose one or combine them, and your free audit will show you where to start.",
+    "People find practitioners in different ways: searching their town, typing a symptom into Google late at night, or asking ChatGPT who to see. Each service below focuses on one of those. Most practices start with one, and your free audit will tell you which.",
   items: [
     {
       id: "local-seo",
@@ -166,7 +163,7 @@ export const SERVICES = {
         "Update your Google Business Profile and publish relevant posts where appropriate.",
       ],
       fit: "A good starting point if you want more local appointments or clients within a specific service area.",
-      cta: "Get my free local SEO audit",
+      cta: "Ask about Local SEO",
     },
     {
       id: "content",
@@ -181,7 +178,7 @@ export const SERVICES = {
         "Connect readers with relevant services and a clear next step.",
       ],
       fit: "A good fit if you want to build a useful body of content over time without taking on a monthly writing project yourself.",
-      cta: "Get my free content audit",
+      cta: "Ask about content",
     },
     {
       id: "ai-visibility",
@@ -197,20 +194,20 @@ export const SERVICES = {
         "Check for barriers that could prevent search tools from accessing your content.",
       ],
       fit: "A good starting point if you want to prepare your existing website for discovery through tools such as ChatGPT and Google’s AI search features. Placement in their answers cannot be guaranteed.",
-      cta: "Get my free AI visibility audit",
+      cta: "Ask about AI visibility",
     },
   ],
 };
 
 export const INCLUDED = {
   eyebrow: "Included with every project",
-  heading: "Clicks are nice. <em>Clients are the point.</em>",
+  heading: "Traffic only matters if it turns into clients.",
   intro:
     "A lot of SEO stops at traffic. But a visitor who can’t find your booking link, or isn’t sure what to do next, never becomes a client. So every project includes a reporting dashboard and a review of the path people take to reach you. We measure inquiries, not just visits.",
   items: [
     {
       title: "A dashboard that tracks what counts",
-      body: "See your visits alongside the actions that lead to new clients: contact form submissions and clicks to call, email, or book. You’ll know whether the work is bringing in inquiries, not just traffic.",
+      body: "See your visits alongside the actions that lead to new clients: contact form submissions and clicks to call, email, or book. You’ll know whether the work is actually bringing in inquiries.",
     },
     {
       title: "A clear path from visitor to client",
@@ -221,7 +218,7 @@ export const INCLUDED = {
 
 export const STEPS = {
   eyebrow: "How to begin",
-  heading: "Let’s take a look at <em>your website first.</em>",
+  heading: "Let’s take a look at your website first.",
   items: [
     {
       title: "Tell us a little about your business",
@@ -240,8 +237,7 @@ export const STEPS = {
 };
 
 export const TEAM = {
-  eyebrow: "Your team",
-  heading: "Meet the people helping <em>your practice grow.</em>",
+  heading: "Meet Whitney and Matt.",
   people: [
     {
       name: "Whitney Bateson, MPH, RD",
@@ -264,11 +260,10 @@ export const TEAM = {
     text: "This was fabulous. It helped validate some things for me… and really met me where I was at.",
     attribution: "Registered dietitian in private practice, after her free audit",
   },
-  cta: "Get my free audit",
 };
 
 export const FAQ = {
-  heading: "A few things <em>you might be wondering.</em>",
+  heading: "Questions we hear a lot",
   items: [
     {
       q: "Do I need to understand SEO before we work together?",

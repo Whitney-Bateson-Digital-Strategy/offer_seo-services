@@ -30,7 +30,7 @@ import SvcVisual from "./SvcVisual.astro";
               <ul class="checks">{s.points.map((p) => <li set:html={p} />)}</ul>
             </div>
           </details>
-          <div class="svc-cta"><Cta label={s.cta} service={s.name} /></div>
+          <div class="svc-cta"><Cta label={s.cta} service={s.name} variant="s" /></div>
         </article>
       ))}
     </div>

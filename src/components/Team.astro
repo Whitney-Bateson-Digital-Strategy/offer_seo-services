@@ -1,12 +1,11 @@
 ---
 import { TEAM } from "../data/page";
 import { asset } from "../lib";
-import Cta from "./Cta.astro";
 ---
 <section id="team" class="team">
   <div class="wrap">
     <div class="center">
-      <p class="eyebrow">{TEAM.eyebrow}</p>
+      
       <h2 class="h2" set:html={TEAM.heading} />
     </div>
     <div class="host-grid">
@@ -28,6 +27,5 @@ import Cta from "./Cta.astro";
         <figcaption>{TEAM.quote.attribution}</figcaption>
       </figure>
     )}
-    <div class="center"><Cta label={TEAM.cta} /></div>
   </div>
 </section>
