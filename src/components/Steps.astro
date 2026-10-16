@@ -8,10 +8,11 @@ import Cta from "./Cta.astro";
       <p class="eyebrow">{STEPS.eyebrow}</p>
       <h2 class="h2" set:html={STEPS.heading} />
     </div>
-    <ol class="step-list">
+    <ol class="timeline">
       {STEPS.items.map((s, i) => (
-        <li class="step">
-          <span class="step-n">{i + 1}</span>
+        <li class="tl-step">
+          <span class="tl-dot" aria-hidden="true">{i + 1}</span>
+          <p class="tl-when">{s.when}</p>
           <h3 set:html={s.title} />
           <p set:html={s.body} />
         </li>

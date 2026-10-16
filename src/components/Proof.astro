@@ -1,0 +1,35 @@
+---
+import { PROOF } from "../data/page";
+---
+<section id="proof" class="proof">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">{PROOF.eyebrow}</p>
+      <h2 class="h2" set:html={PROOF.heading} />
+    </div>
+    <div class="proof-grid">
+      <div class="proof-numbers">
+        <div class="big-metric">
+          <b>{PROOF.big.stat}</b>
+          <p set:html={PROOF.big.body} />
+        </div>
+        <p class="proof-label">{PROOF.findingsLabel}</p>
+        <ul class="findings">
+          {PROOF.findings.map((f) => (
+            <li><b>{f.stat}</b><p set:html={f.body} /></li>
+          ))}
+        </ul>
+        <p class="proof-note" set:html={PROOF.note} />
+      </div>
+      <div class="proof-quotes">
+        <p class="proof-label">{PROOF.quotesLabel}</p>
+        {PROOF.quotes.map((q, i) => (
+          <figure class:list={["pq", { "pq-featured": i === 0 }]}>
+            <blockquote set:html={q.text} />
+            <figcaption>{q.who}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

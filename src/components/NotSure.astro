@@ -1,0 +1,13 @@
+---
+import { NOT_SURE } from "../data/page";
+import Cta from "./Cta.astro";
+---
+<section id="not-sure" class="not-sure">
+  <div class="wrap not-sure-row">
+    <div>
+      <h2 set:html={NOT_SURE.heading} />
+      <p set:html={NOT_SURE.body} />
+    </div>
+    <Cta label={NOT_SURE.cta} />
+  </div>
+</section>
