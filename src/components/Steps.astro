@@ -1,5 +1,6 @@
 ---
 import { STEPS } from "../data/page";
+import Cta from "./Cta.astro";
 ---
 <section id="begin" class="steps">
   <div class="wrap">
@@ -16,5 +17,6 @@ import { STEPS } from "../data/page";
         </li>
       ))}
     </ol>
+    <div class="center steps-cta"><Cta label={STEPS.cta} /></div>
   </div>
 </section>

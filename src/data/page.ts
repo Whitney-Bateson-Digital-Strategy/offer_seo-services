@@ -236,19 +236,6 @@ export const STEPS = {
       body: "After your audit, you’re invited to book a live strategy call with us to discuss how we would approach SEO for your business, including costs and timelines.",
     },
   ],
-};
-
-/* The audit walkthrough video shown after "How to begin".
-   Use ONE of these: `embed` for a YouTube, Vimeo or Loom link, or `file` for an .mp4 dropped
-   into public/ (plus an optional `poster` image there). While both are "", a placeholder shows. */
-export const VIDEO = {
-  eyebrow: "See it for yourself",
-  heading: "Here’s what a <em>free audit looks like.</em>",
-  body: "A short walkthrough from a real audit: what we look at, what we found, and where we’d start.",
-  embed: "", // e.g. "https://www.youtube.com/embed/VIDEO_ID" or "https://www.loom.com/embed/VIDEO_ID"
-  file: "", // e.g. "audit-walkthrough.mp4"
-  poster: "", // e.g. "audit-walkthrough.jpg"
-  title: "Example free SEO audit walkthrough",
   cta: "Get my free audit",
 };
 
