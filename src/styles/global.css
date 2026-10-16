@@ -165,14 +165,11 @@ ul{ list-style:none; }
 .hero{ background:linear-gradient(160deg, var(--anchor) 0%, var(--anchor) 45%, var(--dark) 100%); color:var(--bg); padding:80px 0; }
 .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
 .hero-photo{ position:relative; max-width:480px; justify-self:end; width:100%; }
-/* Square arch with a lime circle peeking out behind the bottom-left corner. */
-.hero-photo::before{
-  content:''; position:absolute; left:-7%; bottom:-7%; width:38%; aspect-ratio:1; border-radius:50%;
-  background:var(--accent);
-}
+/* Photo sits in a soft lime frame that follows the arch shape. */
 .hero-photo img{
-  position:relative; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; object-position:50% 45%;
-  border-radius:50% 50% 28px 28px / 50% 50% 28px 28px; box-shadow:0 20px 60px rgba(0,0,0,.25);
+  display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; object-position:50% 45%;
+  padding:14px; background:var(--soft-lime);
+  border-radius:50% 50% 28px 28px / 50% 50% 28px 28px; box-shadow:0 24px 60px rgba(0,0,0,.28);
 }
 .hero .eyebrow{ color:var(--accent); }
 .hero h1{ color:#fff; margin-bottom:1.3rem; max-width:14ch; }
@@ -187,8 +184,7 @@ ul{ list-style:none; }
   .hero{ padding:56px 0; }
   .hero-grid{ grid-template-columns:1fr; gap:40px; }
   .hero-photo{ order:-1; justify-self:center; max-width:520px; }
-  .hero-photo::before{ width:26%; left:-4%; bottom:-3%; }
-  .hero-photo img{ aspect-ratio:4/3; border-radius:200px 200px 22px 22px; }
+  .hero-photo img{ aspect-ratio:4/3; padding:10px; border-radius:200px 200px 22px 22px; }
 }
 
 /* ---------------- problem ---------------- */
