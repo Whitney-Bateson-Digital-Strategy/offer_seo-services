@@ -402,7 +402,7 @@ ul{ list-style:none; }
 .inc-intro h3{ font-size:clamp(30px, 3.2vw, 40px); line-height:1.15; color:var(--anchor); text-wrap:balance; }
 .inc-intro h3 em{ font-style:italic; }
 .inc-intro p:not(.eyebrow){ font-size:17px; line-height:1.6; color:var(--text); }
-.inc{ border-top:3px solid var(--accent); padding-top:16px; }
+.inc{ border-top:3px solid var(--anchor); padding-top:16px; }
 .inc h4{ font-family:var(--body); font-weight:700; font-size:18px; color:var(--anchor); margin-bottom:.4rem; }
 .inc p{ font-size:16px; line-height:1.6; }
 @media (max-width:900px){
