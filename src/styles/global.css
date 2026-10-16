@@ -200,19 +200,33 @@ ul{ list-style:none; }
 .cost h2{ color:#fff; margin-bottom:1.2rem; }
 .cost h2 em{ color:var(--accent); }
 .cost .eyebrow{ color:var(--accent); }
+.cost{ padding-bottom:150px; }
 .audits-label{
   font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent);
-  text-align:center; margin:72px 0 24px;
+  text-align:center; margin:72px 0 0;
 }
+/* Pulled up so the cards hang across the bottom edge of the dark section. */
+.audits-bridge{ position:relative; z-index:2; margin-top:-110px; }
 .audits{ display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
-.audit{ border-top:2px solid rgba(255,255,255,.18); padding-top:20px; }
-.audit b{
-  display:block; font-family:var(--display); font-weight:400; font-size:44px; line-height:1.1;
-  color:var(--accent); font-variant-numeric:lining-nums; margin-bottom:.5rem;
+.audit{
+  background:var(--anchor); color:#fff; border-radius:16px; padding:28px 24px 26px;
+  box-shadow:0 18px 40px rgba(1,57,64,.28); border-top:4px solid var(--accent);
 }
-.audit p{ font-size:16px; line-height:1.55; color:rgba(255,255,255,.8); }
-@media (max-width:1000px){ .audits{ grid-template-columns:1fr 1fr; gap:32px 24px; } }
-@media (max-width:540px){ .audits{ grid-template-columns:1fr; } .audits-label{ margin-top:56px; } }
+.audit b{
+  display:block; font-family:var(--display); font-weight:400; font-size:46px; line-height:1.05;
+  color:var(--accent); font-variant-numeric:lining-nums; margin-bottom:.6rem;
+}
+.audit p{ font-size:15.5px; line-height:1.55; color:rgba(255,255,255,.85); }
+.audits-note{ font-size:13px; color:var(--ink-soft); text-align:center; margin-top:20px; }
+.audits-bridge + section{ padding-top:72px; }
+@media (max-width:1000px){ .audits{ grid-template-columns:1fr 1fr; } }
+@media (max-width:540px){
+  .audits{ grid-template-columns:1fr; gap:14px; }
+  .audits-label{ margin-top:56px; }
+  .cost{ padding-bottom:130px; }
+  .audits-bridge{ margin-top:-90px; }
+  .audits-bridge + section{ padding-top:56px; }
+}
 .calc{ background:var(--paper); color:var(--text); border-radius:28px; padding:36px; box-shadow:0 20px 60px rgba(0,0,0,.3); }
 .calc h3{ font-size:26px; color:var(--anchor); margin-bottom:.3rem; }
 .calc-intro{ font-size:16px; color:var(--ink-soft); margin-bottom:1.6rem; }
