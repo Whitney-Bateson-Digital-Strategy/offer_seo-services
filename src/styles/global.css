@@ -240,7 +240,15 @@ ul{ list-style:none; }
 
 /* ---------------- approach ---------------- */
 .approach{ background:var(--soft-lime); }
-.approach-statement{ background:var(--anchor); color:var(--bg); text-align:center; }
+.approach-statement{ color:var(--bg); text-align:center; padding-bottom:220px; }
+/* Ombre: the teal band fades into the soft lime of the next section, below the statement text. */
+.approach-statement{
+  background:linear-gradient(180deg, var(--anchor) 0, var(--anchor) calc(100% - 240px), #4f8a7c calc(100% - 140px), var(--soft-lime) 100%);
+}
+.approach-statement + .approach{ padding-top:24px; }
+@media (max-width:768px){
+  .approach-statement{ padding-bottom:160px; background:linear-gradient(180deg, var(--anchor) 0, var(--anchor) calc(100% - 170px), #4f8a7c calc(100% - 100px), var(--soft-lime) 100%); }
+}
 .approach-statement .eyebrow{ color:var(--accent); }
 .statement{
   max-width:30ch; margin:0 auto; text-wrap:balance;
