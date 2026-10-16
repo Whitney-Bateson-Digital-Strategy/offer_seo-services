@@ -1,0 +1,40 @@
+---
+// Small illustrations of what each service's result looks like, drawn in HTML/CSS.
+// They are decorative (aria-hidden); the card text says the same thing in words.
+interface Props { kind: string }
+const { kind } = Astro.props;
+---
+<div class:list={["viz", `viz-${kind}`]} aria-hidden="true">
+  {kind === "local-seo" && (
+    <>
+      <div class="viz-map">
+        <span class="pin pin-a"></span><span class="pin pin-b"></span>
+        <span class="pin pin-you"><b>You</b></span>
+      </div>
+      <div class="viz-listing">
+        <strong>Your Practice</strong>
+        <span class="stars">★★★★★</span>
+        <span class="viz-line w60"></span>
+      </div>
+    </>
+  )}
+  {kind === "content" && (
+    <>
+      <div class="viz-search"><span class="viz-q">how to reset gut health</span></div>
+      <div class="viz-result">
+        <span class="viz-url">yourpractice.com › blog</span>
+        <strong>How to reset your gut health: a dietitian’s guide</strong>
+        <span class="viz-line w90"></span><span class="viz-line w70"></span>
+      </div>
+    </>
+  )}
+  {kind === "ai-visibility" && (
+    <>
+      <div class="bubble bubble-user">Can you recommend a dietitian for gut health?</div>
+      <div class="bubble bubble-ai">
+        <span class="spark">✦</span>
+        <span><strong>Your Practice</strong> specializes in gut health and offers virtual sessions…</span>
+      </div>
+    </>
+  )}
+</div>

@@ -268,11 +268,58 @@ ul{ list-style:none; }
   background:var(--paper); border-radius:24px; box-shadow:var(--shadow); overflow:hidden;
   display:grid; grid-row:span 5; grid-template-rows:subgrid; row-gap:0;
 }
-.svc-head{ background:var(--anchor); color:var(--bg); padding:28px 28px 26px; }
-.svc-head h3{ font-size:30px; color:#fff; margin:.9rem 0 .4rem; }
-.svc-tagline{ font-family:var(--display); font-style:italic; font-size:19px; line-height:1.4; color:var(--accent); }
+.svc-head{ background:var(--anchor); color:var(--bg); padding:26px 26px 26px; display:flex; flex-direction:column; }
+.svc-meta{ display:flex; flex-direction:column; align-items:flex-start; gap:10px; }
+.svc-name{ font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0; }
+.svc-head h3{ font-size:30px; line-height:1.15; color:#fff; margin:.8rem 0 1.4rem; text-wrap:balance; }
+/* Each service gets its own header color: Anchor, Dark, then lime with dark text. */
 .svc:nth-child(2) .svc-head{ background:var(--dark); }
-.svc:nth-child(3) .svc-head{ background:var(--anchor); }
+.svc:nth-child(3) .svc-head{ background:var(--accent); color:var(--dark); }
+.svc:nth-child(3) .svc-head h3{ color:var(--dark); }
+.svc:nth-child(3) .svc-name{ color:var(--anchor); }
+.svc:nth-child(3) .pill{ background:var(--dark); color:var(--accent); }
+
+/* ---- service illustrations ---- */
+.viz{
+  margin-top:auto; height:150px; border-radius:16px; background:var(--paper); color:var(--text);
+  padding:12px; display:flex; flex-direction:column; gap:8px; overflow:hidden;
+  box-shadow:0 10px 24px rgba(0,0,0,.18); font-size:12px; line-height:1.35;
+}
+.viz strong{ color:var(--anchor); }
+.viz-line{ display:block; height:6px; border-radius:6px; background:var(--neutral); }
+.w60{ width:60%; } .w70{ width:70%; } .w90{ width:90%; }
+/* Local SEO: a little map with the practice's pin standing out, and its listing below. */
+.viz-map{
+  position:relative; flex:1; border-radius:10px; overflow:hidden;
+  background:
+    linear-gradient(90deg, transparent 46%, #fff 46%, #fff 52%, transparent 52%),
+    linear-gradient(0deg, transparent 40%, #fff 40%, #fff 47%, transparent 47%),
+    linear-gradient(35deg, transparent 70%, rgba(255,255,255,.9) 70%, rgba(255,255,255,.9) 74%, transparent 74%),
+    var(--soft-lime);
+}
+.pin{ position:absolute; width:12px; height:12px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:#b9c2bf; }
+.pin-a{ left:18%; top:24%; } .pin-b{ left:72%; top:58%; }
+.pin-you{
+  left:52%; top:12%; width:auto; height:auto; transform:none; border-radius:999px;
+  background:var(--anchor); color:var(--accent); padding:3px 9px; box-shadow:0 4px 10px rgba(1,57,64,.35);
+}
+.pin-you b{ font-size:11px; letter-spacing:.04em; }
+.pin-you::after{ content:''; position:absolute; left:50%; bottom:-5px; translate:-50% 0; border:5px solid transparent; border-top-color:var(--anchor); border-bottom:0; }
+.viz-listing{ display:flex; flex-wrap:wrap; align-items:center; gap:4px 8px; }
+.stars{ color:#e0a100; letter-spacing:1px; font-size:11px; }
+.viz-listing .viz-line{ flex-basis:100%; }
+/* Growth Content: a search box and the practice's article as the result. */
+.viz-search{ border:1px solid var(--rule); border-radius:999px; padding:6px 12px; display:flex; align-items:center; gap:6px; }
+.viz-search::before{ content:''; width:9px; height:9px; border:2px solid var(--ink-soft); border-radius:50%; flex-shrink:0; }
+.viz-q{ color:var(--text); }
+.viz-result{ display:flex; flex-direction:column; gap:5px; padding:4px 2px 0; }
+.viz-url{ color:var(--ink-soft); font-size:11px; }
+.viz-result strong{ font-family:var(--display); font-weight:500; font-size:14px; line-height:1.25; color:#1a5fb4; }
+/* AI Visibility: a question and an AI answer naming the practice. */
+.bubble{ border-radius:12px; padding:8px 10px; max-width:88%; }
+.bubble-user{ align-self:flex-end; background:var(--neutral); }
+.bubble-ai{ align-self:flex-start; background:var(--soft-lime); display:flex; gap:6px; align-items:flex-start; }
+.spark{ color:var(--anchor); font-size:12px; line-height:1.35; }
 .svc-summary{ font-weight:700; color:var(--anchor); font-size:17px; line-height:1.55; padding:24px 28px 0; margin:0; }
 .svc-fit{ font-size:16px; line-height:1.55; color:var(--ink-soft); padding:12px 28px 0; margin:0; }
 .svc-more{ margin:20px 28px 0; border-top:1px solid var(--rule); }

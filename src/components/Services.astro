@@ -1,6 +1,7 @@
 ---
 import { SERVICES, INCLUDED } from "../data/page";
 import Cta from "./Cta.astro";
+import SvcVisual from "./SvcVisual.astro";
 ---
 <section id="services" class="services">
   <div class="wrap">
@@ -13,9 +14,12 @@ import Cta from "./Cta.astro";
       {SERVICES.items.map((s) => (
         <article class="svc" id={s.id}>
           <div class="svc-head">
-            <span class="pill">{s.format}</span>
-            <h3>{s.name}</h3>
-            <p class="svc-tagline" set:html={s.tagline} />
+            <div class="svc-meta">
+              <p class="svc-name">{s.name}</p>
+              <span class="pill">{s.format}</span>
+            </div>
+            <h3 set:html={s.headline} />
+            <SvcVisual kind={s.id} />
           </div>
           <p class="svc-summary" set:html={s.summary} />
           <p class="svc-fit" set:html={s.fit} />

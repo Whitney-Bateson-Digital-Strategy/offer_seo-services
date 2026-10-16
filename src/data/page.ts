@@ -148,15 +148,15 @@ export const APPROACH = {
 };
 
 export const SERVICES = {
-  heading: "Here’s how <em>we can help.</em>",
+  heading: "Be the practice they find, <em>wherever they’re looking.</em>",
   intro:
-    "Some practices need a focused project. Others need consistent content and support. We’ll help you choose a starting point based on your website and what you want to grow.",
+    "Some people search their city. Some search their symptoms. More and more simply ask AI. Each service puts you in front of a different kind of search. Choose one or combine them, and your free audit will show you where to start.",
   items: [
     {
       id: "local-seo",
       name: "Local SEO",
       format: "3-month project",
-      tagline: "Reach more clients in the areas you serve",
+      headline: "Put your practice on the map.",
       summary:
         "A focused three-month project for practices that want more inquiries from a particular city or region.",
       body: "We improve how your website presents your services and where you offer them. For eligible practices, we also work on your Google Business Profile so people searching locally can get a clearer picture of your business.",
@@ -172,7 +172,7 @@ export const SERVICES = {
       id: "content",
       name: "Growth Content Engine",
       format: "Ongoing monthly",
-      tagline: "Put your expertise to work on your website",
+      headline: "Be the answer they’re searching for.",
       summary: "Ongoing monthly content support for practitioners who have plenty to say and little time to write.",
       body: "We research relevant topics, talk with you about your perspective, and turn that knowledge into articles for your website. You review the content, and we handle the writing, preparation, and publishing.",
       points: [
@@ -187,7 +187,7 @@ export const SERVICES = {
       id: "ai-visibility",
       name: "AI Visibility",
       format: "One-time project",
-      tagline: "Help search tools understand your practice",
+      headline: "Be the practice AI can recommend.",
       summary:
         "A one-time project to make your website’s information clearer and more accessible to search tools, including those used in AI-assisted search.",
       body: "We clarify the details about your business, services, and expertise, develop answers to common client questions with your input, and review the behind-the-scenes setup that helps search tools read your site.",
