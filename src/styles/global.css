@@ -240,14 +240,39 @@ ul{ list-style:none; }
 
 /* ---------------- approach ---------------- */
 .approach{ background:var(--soft-lime); }
-.approach-statement{ color:var(--bg); text-align:center; padding-bottom:220px; }
-/* Ombre: the teal band fades into the soft lime of the next section, below the statement text. */
+.approach-statement{ color:var(--bg); text-align:center; padding-bottom:300px; }
+/* Ombre: the teal band eases into the soft lime of the next section, starting just under the
+   statement. Eased stops (smootherstep) mixed in OKLab avoid a hard start line or a muddy middle. */
 .approach-statement{
-  background:linear-gradient(180deg, var(--anchor) 0, var(--anchor) calc(100% - 240px), #4f8a7c calc(100% - 140px), var(--soft-lime) 100%);
+  background:linear-gradient(180deg,
+    var(--anchor) 0,
+    var(--anchor) calc(100% - 380px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 0.9%) calc(100% - 342px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 5.8%) calc(100% - 304px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 16.3%) calc(100% - 266px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 31.7%) calc(100% - 228px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 50.0%) calc(100% - 190px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 68.3%) calc(100% - 152px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 83.7%) calc(100% - 114px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 94.2%) calc(100% - 76px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 99.1%) calc(100% - 38px),
+    var(--soft-lime) 100%);
 }
 .approach-statement + .approach{ padding-top:24px; }
 @media (max-width:768px){
-  .approach-statement{ padding-bottom:160px; background:linear-gradient(180deg, var(--anchor) 0, var(--anchor) calc(100% - 170px), #4f8a7c calc(100% - 100px), var(--soft-lime) 100%); }
+  .approach-statement{ padding-bottom:200px; background:linear-gradient(180deg,
+    var(--anchor) 0,
+    var(--anchor) calc(100% - 260px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 0.9%) calc(100% - 234px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 5.8%) calc(100% - 208px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 16.3%) calc(100% - 182px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 31.7%) calc(100% - 156px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 50.0%) calc(100% - 130px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 68.3%) calc(100% - 104px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 83.7%) calc(100% - 78px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 94.2%) calc(100% - 52px),
+    color-mix(in oklab, var(--anchor), var(--soft-lime) 99.1%) calc(100% - 26px),
+    var(--soft-lime) 100%); }
 }
 .approach-statement .eyebrow{ color:var(--accent); }
 .statement{
