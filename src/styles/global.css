@@ -194,9 +194,19 @@ ul{ list-style:none; }
 .cost h2{ color:#fff; margin-bottom:1.2rem; }
 .cost h2 em{ color:var(--lime); }
 .cost .eyebrow{ color:var(--peach); }
-.findings-label{ font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--lime); margin:2rem 0 .8rem; }
-.findings li{ padding-left:1.6em; position:relative; margin-bottom:.6em; font-size:17px; }
-.findings li::before{ content:'→'; position:absolute; left:0; color:var(--peach); }
+.audits-label{
+  font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--lime);
+  text-align:center; margin:72px 0 24px;
+}
+.audits{ display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
+.audit{ border-top:2px solid rgba(255,255,255,.18); padding-top:20px; }
+.audit b{
+  display:block; font-family:var(--display); font-weight:400; font-size:44px; line-height:1.1;
+  color:var(--peach); font-variant-numeric:lining-nums; margin-bottom:.5rem;
+}
+.audit p{ font-size:16px; line-height:1.55; color:rgba(255,255,255,.8); }
+@media (max-width:1000px){ .audits{ grid-template-columns:1fr 1fr; gap:32px 24px; } }
+@media (max-width:540px){ .audits{ grid-template-columns:1fr; } .audits-label{ margin-top:56px; } }
 .calc{ background:var(--paper); color:var(--text); border-radius:28px; padding:36px; box-shadow:0 20px 60px rgba(0,0,0,.3); }
 .calc h3{ font-size:26px; color:var(--teal); margin-bottom:.3rem; }
 .calc-intro{ font-size:16px; color:var(--ink-soft); margin-bottom:1.6rem; }
@@ -217,7 +227,10 @@ ul{ list-style:none; }
 @media (max-width:540px){ .calc{ padding:26px 20px; } .calc-result b{ font-size:32px; } }
 
 /* ---------------- what's possible ---------------- */
-.possible .card h3{ font-style:italic; }
+.quote-card{ display:flex; flex-direction:column; justify-content:space-between; gap:1.4rem; }
+.quote-card blockquote{ font-family:var(--display); font-style:italic; font-size:21px; line-height:1.45; color:var(--teal); }
+.quote-card blockquote::before{ content:'“'; display:block; font-size:56px; line-height:.6; color:var(--coral); margin-bottom:.4rem; }
+.quote-card figcaption{ font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
 
 /* ---------------- approach ---------------- */
 .approach{ background:var(--sky-wash); }

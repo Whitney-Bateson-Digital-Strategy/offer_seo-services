@@ -8,8 +8,6 @@ const c = COST.calculator;
       <p class="eyebrow">{COST.eyebrow}</p>
       <h2 set:html={COST.heading} />
       {COST.body.map((p) => <p set:html={p} />)}
-      <p class="findings-label">{COST.findingsHeading}</p>
-      <ul class="findings">{COST.findings.map((f) => <li set:html={f} />)}</ul>
     </div>
 
     <div class="calc" data-calc
@@ -33,6 +31,15 @@ const c = COST.calculator;
       </div>
       <p class="calc-note">{c.disclaimer}</p>
     </div>
+  </div>
+
+  <div class="wrap">
+    <p class="audits-label">{COST.audits.heading}</p>
+    <ul class="audits">
+      {COST.audits.items.map((a) => (
+        <li class="audit"><b>{a.stat}</b><p set:html={a.body} /></li>
+      ))}
+    </ul>
   </div>
 </section>
 

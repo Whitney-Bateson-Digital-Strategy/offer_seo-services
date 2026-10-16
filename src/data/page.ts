@@ -54,14 +54,32 @@ export const COST = {
     "People are already searching for the kind of help you offer. When your practice doesn’t show up, or your website doesn’t make the next step clear, those searches turn into consultations somewhere else.",
     "That loss never appears on a report, which is what makes it so easy to put off.",
   ],
-  // Patterns from past WBDS audits.
-  findingsHeading: "What we see most often in practice websites",
-  findings: [
-    "Search traffic comes almost entirely from people who already know the practice’s name.",
-    "The site never clearly says where the practice serves clients, so local searches go to someone else.",
-    "Several services share one page, so Google can’t tell who to show it to.",
-    "Pages are quietly blocked from Google, and no one knows until someone looks.",
-  ],
+  // Real, anonymized findings from recent WBDS audits (sources noted for each).
+  audits: {
+    heading: "From our recent audits",
+    items: [
+      {
+        // SEO Audit_ Functional Vitality.pdf
+        stat: "2,100",
+        body: "searches a month for “what causes extreme fatigue,” a question with almost no competition. The nutritionist we audited was mostly found by people who already knew her name.",
+      },
+      {
+        // SEO Audit_ Functional Vitality.pdf
+        stat: "3 states",
+        body: "where Google was showing a Midwest practice to searchers: New York, Michigan, and Pennsylvania. Nothing on her site said where she worked.",
+      },
+      {
+        // SEO Audit_ Bone Health Dietitian.pdf (33 of 149 clicks)
+        stat: "22%",
+        body: "of a dietitian’s search clicks for the whole year came from one blog post. Most of her other pages sat on page 2 of Google.",
+      },
+      {
+        // SEO Adair transcript
+        stat: "148 pages",
+        body: "of a gut health dietitian’s website were blocked from Google’s results, until the audit found them.",
+      },
+    ],
+  },
   calculator: {
     heading: "What could search be worth to your practice?",
     intro: "Adjust the numbers to match your practice for a rough idea.",
@@ -77,22 +95,29 @@ export const COST = {
   },
 };
 
-/* DRAFT COPY: new section. Swap the cards for client testimonials once you have them. */
+/* Verbatim client reactions from recent audit calls, anonymized. Confirm each client is happy
+   for their words to be used before launch (sources noted for each). */
 export const POSSIBLE = {
-  eyebrow: "What’s possible",
-  heading: "Picture a website that <em>works between sessions.</em>",
-  items: [
+  eyebrow: "After their free audit",
+  heading: "Most practices are <em>closer than they think.</em>",
+  // SEO proposals in the audit folder: 6 of 8 practices.
+  intro:
+    "In 6 of the last 8 practices we reviewed, the website already had enough trust with Google for new pages to rank quickly. It mostly needed a clear plan for what to publish and where.",
+  quotes: [
     {
-      title: "“I found you on Google.”",
-      body: "New clients start telling you they found you by searching, not only through a friend or a referral.",
+      // SEO Holly transcript
+      text: "Some confirmation of some things I’m doing well, and some new things to work on to keep growing… this was a very helpful time spent.",
+      who: "Dietitian with a national group program",
     },
     {
-      title: "Steadier months",
-      body: "A reliable flow of interest that doesn’t depend on who happened to send someone your way.",
+      // SEO Mary transcript
+      text: "I didn’t realize there was a way to increase the amount that AI is referencing… that’s really good to hear that we could have some control over that.",
+      who: "Dietitian with a virtual practice",
     },
     {
-      title: "The right people for the right service",
-      body: "Prospective clients find the service or program you most want to grow and already understand who it’s for.",
+      // SEO heather Smith Transcript
+      text: "This has been extremely helpful and enlightening.",
+      who: "Dietitian licensed in several states",
     },
   ],
 };
@@ -233,11 +258,11 @@ export const TEAM = {
   ],
   together:
     "Together, we’ll explain our recommendations in everyday language and help you understand the work you’re investing in. <b>You’re in a tech-jargon safe zone!</b>",
-  // Set quote.text to "" to hide the quote. Verbatim from a past audit call (anonymized);
-  // confirm the client is happy for it to be used before launch.
+  // Set quote.text to "" to hide the quote. Verbatim from a past audit call (SEO Beth C Video.vtt),
+  // anonymized; confirm the client is happy for it to be used before launch.
   quote: {
-    text: "It makes it very clear. I am not a techie person at all… it makes a lot of sense.",
-    attribution: "Registered dietitian, after her free audit",
+    text: "This was fabulous. It helped validate some things for me… and really met me where I was at.",
+    attribution: "Registered dietitian in private practice, after her free audit",
   },
   cta: "Get my free audit",
 };
