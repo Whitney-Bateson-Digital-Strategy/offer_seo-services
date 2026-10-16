@@ -31,7 +31,7 @@ export const HERO = {
   cta: "Get my free audit",
   secondaryCta: "See how we help",
   image: "hero.jpg",
-  imageAlt: "Hands typing on a laptop",
+  imageAlt: "A practitioner working on her laptop at a wooden desk, with a teal coffee cup beside her",
 };
 
 export const PROBLEM = {
