@@ -1,0 +1,23 @@
+---
+import { HERO } from "../data/page";
+import { asset } from "../lib";
+import Cta from "./Cta.astro";
+---
+<section id="hero" class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow" set:html={HERO.eyebrow} />
+      <h1 set:html={HERO.headline} />
+      <div class="hero-body">
+        {HERO.body.map((p) => <p set:html={p} />)}
+      </div>
+      <div class="hero-ctas">
+        <Cta label={HERO.cta} />
+        <a class="btn btn-s" href="#services">{HERO.secondaryCta}</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src={asset(HERO.image)} alt={HERO.imageAlt} width="960" height="1440" fetchpriority="high" />
+    </div>
+  </div>
+</section>

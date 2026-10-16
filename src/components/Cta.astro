@@ -1,0 +1,16 @@
+---
+// A button that opens the audit request form. Until the form link is set it points to "#".
+import { formUrl } from "../lib";
+
+interface Props {
+  label: string;
+  variant?: "p" | "s";
+  service?: string;
+}
+const { label, variant = "p", service } = Astro.props;
+const url = formUrl(service);
+const cls = ["btn", `btn-${variant}`];
+---
+{url
+  ? <a class:list={cls} href={url} target="_blank" rel="noopener">{label}</a>
+  : <a class:list={cls} href="#" title="Add the Airtable form link in src/data/page.ts">{label}</a>}

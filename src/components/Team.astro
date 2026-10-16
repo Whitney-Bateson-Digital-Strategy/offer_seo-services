@@ -1,0 +1,33 @@
+---
+import { TEAM } from "../data/page";
+import { asset } from "../lib";
+import Cta from "./Cta.astro";
+---
+<section id="team" class="team">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">{TEAM.eyebrow}</p>
+      <h2 class="h2" set:html={TEAM.heading} />
+    </div>
+    <div class="host-grid">
+      {TEAM.people.map((p) => (
+        <div class="host">
+          <img src={asset(p.image)} alt={p.name} width="104" height="104" loading="lazy" />
+          <div>
+            <h3>{p.name}</h3>
+            <div class="role">{p.role}</div>
+            <p set:html={p.bio} />
+          </div>
+        </div>
+      ))}
+    </div>
+    <p class="together" set:html={TEAM.together} />
+    {TEAM.quote.text && (
+      <figure class="team-quote">
+        <blockquote set:html={TEAM.quote.text} />
+        <figcaption>{TEAM.quote.attribution}</figcaption>
+      </figure>
+    )}
+    <div class="center"><Cta label={TEAM.cta} /></div>
+  </div>
+</section>

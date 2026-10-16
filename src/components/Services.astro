@@ -1,0 +1,48 @@
+---
+import { SERVICES } from "../data/page";
+import Cta from "./Cta.astro";
+---
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="center">
+      <h2 class="h2" set:html={SERVICES.heading} />
+      <p class="lede" set:html={SERVICES.intro} />
+    </div>
+
+    <div class="svc-list">
+      {SERVICES.items.map((s) => (
+        <article class="svc" id={s.id}>
+          <div class="svc-head">
+            <span class="pill">{s.format}</span>
+            <h3>{s.name}</h3>
+            <p class="svc-tagline" set:html={s.tagline} />
+          </div>
+          <div class="svc-body">
+            <p class="svc-summary" set:html={s.summary} />
+            <p set:html={s.body} />
+            <ul class="checks">{s.points.map((p) => <li set:html={p} />)}</ul>
+            <p class="svc-fit" set:html={s.fit} />
+            <Cta label={s.cta} service={s.name} />
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="extras">
+      <h3>{SERVICES.extrasHeading}</h3>
+      <div class="extras-grid">
+        {SERVICES.extras.map((x) => (
+          <div>
+            <h4>{x.title}</h4>
+            <p set:html={x.body} />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="center after-cta">
+      <p set:html={SERVICES.note} />
+      <Cta label={SERVICES.cta} />
+    </div>
+  </div>
+</section>

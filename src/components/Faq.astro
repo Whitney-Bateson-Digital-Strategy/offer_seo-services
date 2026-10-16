@@ -1,0 +1,19 @@
+---
+import { FAQ } from "../data/page";
+const half = Math.ceil(FAQ.items.length / 2);
+const cols = [FAQ.items.slice(0, half), FAQ.items.slice(half)];
+---
+<section id="faq">
+  <div class="wrap">
+    <div class="center"><h2 class="h2" set:html={FAQ.heading} /></div>
+    <div class="faq">
+      {cols.map((col) => (
+        <div class="faq-col">
+          {col.map((f) => (
+            <details><summary set:html={f.q} /><div class="a" set:html={f.a} /></details>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

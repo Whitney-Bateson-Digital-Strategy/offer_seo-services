@@ -1,0 +1,19 @@
+---
+import { POSSIBLE } from "../data/page";
+---
+<section id="possible" class="possible">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">{POSSIBLE.eyebrow}</p>
+      <h2 class="h2" set:html={POSSIBLE.heading} />
+    </div>
+    <div class="cards">
+      {POSSIBLE.items.map((o) => (
+        <article class="card">
+          <h3 set:html={o.title} />
+          <p set:html={o.body} />
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

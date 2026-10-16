@@ -1,0 +1,60 @@
+---
+import { COST } from "../data/page";
+const c = COST.calculator;
+---
+<section id="cost" class="cost">
+  <div class="wrap cost-grid">
+    <div class="cost-copy">
+      <p class="eyebrow">{COST.eyebrow}</p>
+      <h2 set:html={COST.heading} />
+      {COST.body.map((p) => <p set:html={p} />)}
+      <p class="findings-label">{COST.findingsHeading}</p>
+      <ul class="findings">{COST.findings.map((f) => <li set:html={f} />)}</ul>
+    </div>
+
+    <div class="calc" data-calc
+      data-click={c.clickRate} data-inquiry={c.inquiryRate} data-close={c.closeRate}>
+      <h3>{c.heading}</h3>
+      <p class="calc-intro">{c.intro}</p>
+
+      <label class="calc-field">
+        <span class="calc-label">{c.searches.label}<output data-out="searches">{c.searches.value.toLocaleString("en-US")}</output></span>
+        <input type="range" name="searches" min={c.searches.min} max={c.searches.max} step={c.searches.step} value={c.searches.value} />
+      </label>
+
+      <label class="calc-field">
+        <span class="calc-label">{c.clientValue.label}<output data-out="value">${c.clientValue.value.toLocaleString("en-US")}</output></span>
+        <input type="range" name="value" min={c.clientValue.min} max={c.clientValue.max} step={c.clientValue.step} value={c.clientValue.value} />
+      </label>
+
+      <div class="calc-result" aria-live="polite">
+        <div><b data-out="clients">–</b><span>new clients a year</span></div>
+        <div><b data-out="revenue">–</b><span>in yearly revenue</span></div>
+      </div>
+      <p class="calc-note">{c.disclaimer}</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-calc]").forEach((calc) => {
+    const { click, inquiry, close } = calc.dataset;
+    const rate = Number(click) * Number(inquiry) * Number(close);
+    const input = (n: string) => calc.querySelector<HTMLInputElement>(`input[name="${n}"]`)!;
+    const out = (n: string) => calc.querySelector<HTMLElement>(`[data-out="${n}"]`)!;
+    const fmt = (n: number) => Math.round(n).toLocaleString("en-US");
+
+    const update = () => {
+      const searches = Number(input("searches").value);
+      const value = Number(input("value").value);
+      const raw = searches * 12 * rate;
+      const clients = raw < 1 ? raw : Math.round(raw);
+      out("searches").textContent = fmt(searches);
+      out("value").textContent = `$${fmt(value)}`;
+      out("clients").textContent = clients < 1 ? "<1" : fmt(clients);
+      out("revenue").textContent = `$${fmt(clients * value)}`;
+    };
+    calc.addEventListener("input", update);
+    update();
+  });
+</script>

@@ -1,0 +1,14 @@
+---
+import { PROBLEM } from "../data/page";
+---
+<section id="problem" class="problem">
+  <div class="wrap">
+    <div class="center">
+      <h2 class="h2 h2-wide" set:html={PROBLEM.heading} />
+      <p class="lede" set:html={PROBLEM.intro} />
+    </div>
+    <ul class="pain-list">
+      {PROBLEM.points.map((p) => <li set:html={p} />)}
+    </ul>
+  </div>
+</section>

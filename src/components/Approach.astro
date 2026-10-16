@@ -1,0 +1,26 @@
+---
+import { APPROACH } from "../data/page";
+---
+<section id="approach" class="approach">
+  <div class="wrap">
+    <div class="approach-grid">
+      <div>
+        <p class="eyebrow">{APPROACH.eyebrow}</p>
+        <p class="approach-intro" set:html={APPROACH.intro} />
+      </div>
+      <div>
+        <h2 class="h2" set:html={APPROACH.heading} />
+        {APPROACH.body.map((p) => <p set:html={p} />)}
+      </div>
+    </div>
+    <ol class="pillars">
+      {APPROACH.pillars.map((p, i) => (
+        <li class="pillar">
+          <span class="pillar-n">{i + 1}</span>
+          <h3 set:html={p.title} />
+          <p set:html={p.body} />
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
