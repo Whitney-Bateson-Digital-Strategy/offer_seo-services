@@ -1,6 +1,7 @@
 ---
 import { STEPS } from "../data/page";
 import Cta from "./Cta.astro";
+import AuditMock from "./AuditMock.astro";
 ---
 <section id="begin" class="steps">
   <div class="wrap">
@@ -17,6 +18,7 @@ import Cta from "./Cta.astro";
         </li>
       ))}
     </ol>
+    <AuditMock />
     <div class="center steps-cta"><Cta label={STEPS.cta} /></div>
   </div>
 </section>
