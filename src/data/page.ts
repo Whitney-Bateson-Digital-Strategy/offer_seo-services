@@ -175,19 +175,6 @@ export const SERVICES = {
       cta: "Get my free AI visibility audit",
     },
   ],
-  extrasHeading: "Additional help when you need it",
-  extras: [
-    {
-      title: "Website SEO Cleanup",
-      body: "If problems with your existing pages are getting in the way, we can recommend a one-time cleanup. This may include fixing broken links, improving page titles and headings, and making the site easier to navigate. We’ll explain what’s needed and include it in your scope before work begins.",
-    },
-    {
-      title: "Content Planning",
-      body: "Prefer to write your own articles? We can research topics and create a focused content plan so you know what to write about and how it connects to your services.",
-    },
-  ],
-  note: "You don’t need to choose a service before requesting your audit.",
-  cta: "Get my free video audit",
 };
 
 export const INCLUDED = {

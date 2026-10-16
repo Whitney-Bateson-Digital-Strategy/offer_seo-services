@@ -27,22 +27,5 @@ import Cta from "./Cta.astro";
         </article>
       ))}
     </div>
-
-    <div class="extras">
-      <h3>{SERVICES.extrasHeading}</h3>
-      <div class="extras-grid">
-        {SERVICES.extras.map((x) => (
-          <div>
-            <h4>{x.title}</h4>
-            <p set:html={x.body} />
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div class="center after-cta">
-      <p set:html={SERVICES.note} />
-      <Cta label={SERVICES.cta} />
-    </div>
   </div>
 </section>
