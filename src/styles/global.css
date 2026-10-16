@@ -368,18 +368,25 @@ ul{ list-style:none; }
 .faq .a{ padding:0 24px 22px; font-size:17px; }
 @media (max-width:820px){ .faq{ grid-template-columns:1fr; } }
 
-/* ---------------- closer (ombre) ---------------- */
+/* ---------------- closer: background video under a teal overlay ---------------- */
 .closer{
   position:relative; overflow:hidden; isolation:isolate; text-align:center; color:var(--bg);
-  background:linear-gradient(180deg, var(--anchor) 0%, var(--dark) 100%);
+  background-color:var(--anchor); background-position:center; background-size:cover;
   padding:120px 0;
 }
-/* Soft lime glow behind the call to action. */
+.closer-video{ position:absolute; inset:0; z-index:-3; width:100%; height:100%; object-fit:cover; }
+/* Teal overlay (Anchor to Dark) keeps the white text readable over the bright footage. */
 .closer::before{
+  content:""; position:absolute; inset:0; z-index:-2;
+  background:linear-gradient(180deg, rgba(2,82,93,.86) 0%, rgba(1,57,64,.93) 100%);
+}
+/* Soft lime glow behind the call to action. */
+.closer::after{
   content:""; position:absolute; z-index:-1; left:50%; bottom:-30%; width:min(1100px, 140%); aspect-ratio:2/1;
   translate:-50% 0; border-radius:50%;
-  background:radial-gradient(closest-side, rgba(227,246,150,.22), rgba(241,249,207,.06) 60%, transparent);
+  background:radial-gradient(closest-side, rgba(227,246,150,.18), rgba(241,249,207,.05) 60%, transparent);
 }
+@media (prefers-reduced-motion:reduce){ .closer-video{ display:none; } }
 @media (max-width:768px){ .closer{ padding:80px 0; } }
 .closer .eyebrow{ color:var(--accent); }
 .closer h2{ color:#fff; max-width:min(26ch, 800px); margin-inline:auto; }
