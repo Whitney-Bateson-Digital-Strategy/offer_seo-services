@@ -17,15 +17,32 @@ import Cta from "./Cta.astro";
             <h3>{s.name}</h3>
             <p class="svc-tagline" set:html={s.tagline} />
           </div>
-          <div class="svc-body">
-            <p class="svc-summary" set:html={s.summary} />
-            <p set:html={s.body} />
-            <ul class="checks">{s.points.map((p) => <li set:html={p} />)}</ul>
-            <p class="svc-fit" set:html={s.fit} />
-            <Cta label={s.cta} service={s.name} />
-          </div>
+          <p class="svc-summary" set:html={s.summary} />
+          <p class="svc-fit" set:html={s.fit} />
+          <details class="svc-more">
+            <summary>What’s included</summary>
+            <div class="svc-more-body">
+              <p set:html={s.body} />
+              <ul class="checks">{s.points.map((p) => <li set:html={p} />)}</ul>
+            </div>
+          </details>
+          <div class="svc-cta"><Cta label={s.cta} service={s.name} /></div>
         </article>
       ))}
     </div>
   </div>
 </section>
+
+<script>
+  // Opening "What's included" on one card opens it on all three, so they can be compared side by side.
+  const toggles = [...document.querySelectorAll<HTMLDetailsElement>(".svc-more")];
+  let syncing = false;
+  toggles.forEach((d) =>
+    d.addEventListener("toggle", () => {
+      if (syncing) return;
+      syncing = true;
+      toggles.forEach((other) => { if (other !== d) other.open = d.open; });
+      syncing = false;
+    })
+  );
+</script>
