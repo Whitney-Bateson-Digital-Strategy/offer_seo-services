@@ -240,46 +240,13 @@ ul{ list-style:none; }
 
 /* ---------------- approach ---------------- */
 .approach{ background:var(--soft-lime); }
-.approach-statement{ color:var(--bg); text-align:center; padding-bottom:150px; }
-/* Ombre: the teal band eases into the soft lime of the next section, starting just under the
-   statement. Eased stops (smootherstep) mixed in OKLab avoid a hard start line or a muddy middle. */
-.approach-statement{
-  background:linear-gradient(180deg,
-    var(--anchor) 0,
-    var(--anchor) calc(100% - 230px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 0.9%) calc(100% - 207px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 5.8%) calc(100% - 184px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 16.3%) calc(100% - 161px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 31.7%) calc(100% - 138px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 50.0%) calc(100% - 115px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 68.3%) calc(100% - 92px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 83.7%) calc(100% - 69px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 94.2%) calc(100% - 46px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 99.1%) calc(100% - 23px),
-    var(--soft-lime) 100%);
-}
-.approach-statement + .approach{ padding-top:16px; }
-@media (max-width:768px){
-  .approach-statement{ padding-bottom:110px; background:linear-gradient(180deg,
-    var(--anchor) 0,
-    var(--anchor) calc(100% - 170px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 0.9%) calc(100% - 153px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 5.8%) calc(100% - 136px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 16.3%) calc(100% - 119px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 31.7%) calc(100% - 102px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 50.0%) calc(100% - 85px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 68.3%) calc(100% - 68px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 83.7%) calc(100% - 51px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 94.2%) calc(100% - 34px),
-    color-mix(in oklab, var(--anchor), var(--soft-lime) 99.1%) calc(100% - 17px),
-    var(--soft-lime) 100%); }
-  .approach-statement + .approach{ padding-top:8px; }
-}
-.approach-statement .eyebrow{ color:var(--accent); }
+/* The approach statement opens the section, then leads straight into the heading below it. */
 .statement{
-  max-width:30ch; margin:0 auto; text-wrap:balance;
-  font-family:var(--display); font-style:italic; font-size:clamp(28px, 3.4vw, 42px); line-height:1.35; color:#fff;
+  max-width:32ch; margin:0 auto; text-wrap:balance;
+  font-family:var(--display); font-style:italic; font-size:clamp(26px, 3vw, 36px); line-height:1.4; color:var(--anchor);
 }
+.approach-divider{ display:block; width:72px; height:4px; border-radius:4px; background:var(--anchor); opacity:.25; margin:44px auto 40px; }
+@media (max-width:768px){ .approach-divider{ margin:32px auto 28px; } }
 .approach-body{ max-width:var(--measure); margin:0 auto; font-size:19px; }
 .pillars{ list-style:none; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:var(--content); margin:0 auto; }
 .pillar{ background:var(--paper); border-radius:24px; padding:30px; box-shadow:var(--shadow); }
