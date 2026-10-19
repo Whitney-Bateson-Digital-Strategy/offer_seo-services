@@ -22,4 +22,4 @@ npm run preview  # serve the built site
 
 Paste the audit form's share link (`https://airtable.com/app…/shr…`) into `FORM.url`. Until then, the buttons point to `#`.
 
-If the form has a field for the service someone is interested in, put its exact name in `FORM.servicePrefillField`. The buttons on the three service cards will then pre-fill it with "Local SEO", "Growth Content Engine" or "AI Visibility".
+If the form has a field for the service someone is interested in, put its exact name in `FORM.servicePrefillField`. The "Ask about…" links on the three service cards will then pre-fill it with "Local SEO", "Growth Content Engine" or "AI Visibility".
