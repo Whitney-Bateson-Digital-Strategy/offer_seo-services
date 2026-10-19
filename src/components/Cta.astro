@@ -4,12 +4,12 @@ import { formUrl } from "../lib";
 
 interface Props {
   label: string;
-  variant?: "p" | "s";
+  variant?: "p" | "s" | "t"; // primary, secondary, or a text link with an arrow
   service?: string;
 }
 const { label, variant = "p", service } = Astro.props;
 const url = formUrl(service);
-const cls = ["btn", `btn-${variant}`];
+const cls = variant === "t" ? ["text-cta"] : ["btn", `btn-${variant}`];
 ---
 {url
   ? <a class:list={cls} href={url} target="_blank" rel="noopener">{label}</a>

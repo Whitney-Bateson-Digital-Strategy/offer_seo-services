@@ -1,5 +1,6 @@
 ---
 import { PROBLEM } from "../data/page";
+import { asset } from "../lib";
 ---
 <section id="problem" class="problem">
   <div class="wrap">
@@ -10,5 +11,12 @@ import { PROBLEM } from "../data/page";
     <ul class="pain-list">
       {PROBLEM.points.map((p) => <li set:html={p} />)}
     </ul>
+    <aside class="whitney-note">
+      <img src={asset(PROBLEM.note.image)} alt="" width="72" height="72" loading="lazy" />
+      <div>
+        {PROBLEM.note.body.map((p) => <p set:html={p} />)}
+        <p class="whitney-sign">– {PROBLEM.note.signoff}</p>
+      </div>
+    </aside>
   </div>
 </section>

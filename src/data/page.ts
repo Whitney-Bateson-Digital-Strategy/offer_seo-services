@@ -39,11 +39,22 @@ export const PROBLEM = {
   intro:
     "Maybe referrals keep you busy some months and leave you wondering where the next client will come from in others. You have a website, but you’re not sure how much it’s actually helping.",
   points: [
-    "You search for your services and see other practices before your own.",
+    "You search for your own services and find other practices before yours.",
     "People visit your website, but you rarely hear, “I found you on Google.”",
-    "You have a service or program you’d love to grow, and too few people know it exists.",
-    "You’ve heard you should be blogging or showing up in ChatGPT, but you don’t know what’s worth your time.",
+    "You have a service or program you’d love to grow, but not enough people know it exists.",
+    "You’ve been told to blog. Now you’re hearing you need to show up in ChatGPT, too. What’s actually worth your time?",
   ],
+  /* DRAFT COPY: Whitney to confirm this sounds like her before launch. Facts are from her
+     October 2026 emails (social media story, and her practitioner survey). */
+  note: {
+    body: [
+      "I’m a dietitian too, so I know how this goes. You’re great at the work, and marketing gets squeezed in between client sessions.",
+      "For years, I posted on social media hoping it would bring in clients (spoiler alert: it didn’t). And when I surveyed practitioners, nearly two-thirds told me they don’t have a consistent marketing system either.",
+      "Search is different. People are already looking for the help you offer. <b>You just need to be there when they look.</b> That’s what we want to help you with.",
+    ],
+    signoff: "Whitney",
+    image: "whitney.jpg",
+  },
 };
 
 /* DRAFT COPY: new section, not in the original brief. */
@@ -51,7 +62,7 @@ export const COST = {
   heading: "When you’re hard to find, people book with whoever they find first.",
   body: [
     "People are already searching for the kind of help you offer. When your practice doesn’t show up, or your website doesn’t make the next step clear, those searches turn into consultations somewhere else.",
-    "That loss never appears on a report, which is what makes it so easy to put off.",
+    "That loss never shows up on a report, which is exactly why it’s so easy to put off.",
   ],
   // Real, anonymized findings from recent WBDS audits (sources noted for each).
   audits: {
@@ -122,7 +133,7 @@ export const POSSIBLE = {
 
 export const APPROACH = {
   intro:
-    "You shouldn’t have to figure all of this out between client sessions. We can help you understand what needs attention and take on the work to improve it.",
+    "You shouldn’t have to figure all of this out between client sessions (your plate is full enough!). We’ll show you what needs attention, and we can take the work off your hands.",
   heading: "Start with the clients <em>you want more of.</em>",
   body: [
     "SEO means helping people find your business through search. For your practice, its value comes from what happens next: someone asks about working with you, books a consultation, or joins your program.",
@@ -147,71 +158,72 @@ export const APPROACH = {
 export const SERVICES = {
   heading: "Here’s how we can help.",
   intro:
-    "People find practitioners in different ways: searching their town, typing a symptom into Google late at night, or asking ChatGPT who to see. Each service below focuses on one of those. Most practices start with one, and your free audit will tell you which.",
+    "People find practitioners in all kinds of ways: searching their town, typing a symptom into Google at 11 pm, or asking ChatGPT who to see. Each service below focuses on one of those.",
   items: [
     {
       id: "local-seo",
+      // How the client is looking for help. Shown above the headline.
+      moment: "When they search nearby",
       name: "Local SEO",
       format: "3-month project",
       headline: "Put your practice on the map.",
-      summary:
-        "A focused three-month project for practices that want more inquiries from a particular city or region.",
-      body: "We improve how your website presents your services and where you offer them. For eligible practices, we also work on your Google Business Profile so people searching locally can get a clearer picture of your business.",
+      summary: "For practices that want more appointments or clients from a particular city or region.",
       points: [
-        "Improve the pages that introduce your practice and services.",
-        "Create service pages for the locations you want to reach.",
-        "Update your Google Business Profile and publish relevant posts where appropriate.",
+        "Clearer pages introducing your practice and services",
+        "A service page for each location you want to reach",
+        "Google Business Profile updates and posts, for eligible practices",
       ],
-      fit: "A good starting point if you want more local appointments or clients within a specific service area.",
       cta: "Ask about Local SEO",
     },
     {
       id: "content",
+      moment: "When they Google a symptom",
       name: "Growth Content Engine",
       format: "Ongoing monthly",
       headline: "Be the answer they’re searching for.",
-      summary: "Ongoing monthly content support for practitioners who have plenty to say and little time to write.",
-      body: "We research relevant topics, talk with you about your perspective, and turn that knowledge into articles for your website. You review the content, and we handle the writing, preparation, and publishing.",
+      summary: "For practitioners who have plenty to say and little time to write.",
       points: [
-        "Choose topics connected to your services and prospective clients’ questions.",
-        "Create useful articles in your voice, informed by your expertise.",
-        "Connect readers with relevant services and a clear next step.",
+        "Topics tied to your services and your clients’ questions",
+        "A conversation with you to capture your perspective",
+        "Articles in your voice: you review, we write and publish",
+        "A clear next step from every article to your services",
       ],
-      fit: "A good fit if you want to build a useful body of content over time without taking on a monthly writing project yourself.",
       cta: "Ask about content",
     },
     {
       id: "ai-visibility",
+      moment: "When they ask ChatGPT",
       name: "AI Visibility",
       format: "One-time project",
       headline: "Be the practice AI can recommend.",
-      summary:
-        "A one-time project to make your website’s information clearer and more accessible to search tools, including those used in AI-assisted search.",
-      body: "We clarify the details about your business, services, and expertise, develop answers to common client questions with your input, and review the behind-the-scenes setup that helps search tools read your site.",
+      summary: "For practices that want their existing website ready for ChatGPT and Google’s AI search features.",
       points: [
-        "Make it easier to understand who you help and what you offer.",
-        "Publish useful answers that reflect your knowledge and approach.",
-        "Check for barriers that could prevent search tools from accessing your content.",
+        "Clearer details on who you help and what you offer",
+        "Answers to common client questions, written with your input",
+        "A check of the setup that helps search tools read your site",
       ],
-      fit: "A good starting point if you want to prepare your existing website for discovery through tools such as ChatGPT and Google’s AI search features. Placement in their answers cannot be guaranteed.",
+      // Small print under the list.
+      note: "No one can guarantee placement in AI answers.",
       cta: "Ask about AI visibility",
     },
   ],
+  // Shown under the cards: one main button for people who aren't sure which to pick.
+  unsure: "Not sure which fits? <b>Your free audit will tell you.</b>",
+  cta: "Get my free audit",
 };
 
 export const INCLUDED = {
   eyebrow: "Included with every project",
   heading: "Traffic only matters if it turns into clients.",
-  intro:
-    "A lot of SEO stops at traffic. But a visitor who can’t find your booking link, or isn’t sure what to do next, never becomes a client. So every project includes a reporting dashboard and a review of the path people take to reach you. We measure inquiries, not just visits.",
+  intro: "We measure inquiries, not just visits.",
   items: [
     {
       title: "A dashboard that tracks what counts",
-      body: "See your visits alongside the actions that lead to new clients: contact form submissions and clicks to call, email, or book. You’ll know whether the work is actually bringing in inquiries.",
+      body: "See your visits alongside contact form submissions and clicks to call, email, or book.",
     },
     {
       title: "A clear path from visitor to client",
-      body: "We check your site for confusing next steps, hard-to-find contact details, and broken or unclear buttons. Straightforward fixes are part of the agreed work, and we’ll flag anything bigger so there are no surprises.",
+      body: "We fix confusing next steps, hard-to-find contact details, and unclear buttons, and flag anything bigger.",
     },
   ],
 };
