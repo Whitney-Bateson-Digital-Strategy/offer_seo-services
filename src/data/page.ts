@@ -24,9 +24,9 @@ export const HERO = {
   eyebrow: "SEO &amp; AI visibility for dietitians, therapists, and health professionals",
   headline: "Help more of the right clients <em>find you.</em>",
   body: [
-    "When someone searches for the kind of help you offer, you want your name to come up. Not the practice down the street.",
-    "We help you show up on Google and get recommended by AI. And we don’t stop at clicks: we care about the inquiries and bookings that come after.",
-    "<b>Start with a free audit.</b> We’ll look at your website and show you the best places to bring more clients your way.",
+    "When someone searches for the kind of help you offer, you want your practice to be part of the conversation.",
+    "We help you show up on Google and get recommended by AI, with a focus on turning that attention into inquiries and new customers.",
+    "<b>Start with a free audit.</b> We’ll look at your website and show you the top opportunities to bring more clients your way.",
   ],
   cta: "Get my free audit",
   secondaryCta: "See how we help",
@@ -37,12 +37,12 @@ export const HERO = {
 export const PROBLEM = {
   heading: "You want your website to bring in more business. But where do you start?",
   intro:
-    "Maybe referrals keep you busy some months, and other months you’re wondering where the next client is coming from. You have a website, but honestly? You’re not sure it’s doing much for you.",
+    "Maybe referrals keep you busy some months and leave you wondering where the next client will come from in others. You have a website, but you’re not sure how much it’s actually helping.",
   points: [
-    "You search for your services and see other practices before your own.",
+    "You search for your own services and find other practices before yours.",
     "People visit your website, but you rarely hear, “I found you on Google.”",
-    "You have a service or program you’d love to grow, and too few people know it exists.",
-    "You’ve heard you should be blogging or showing up in ChatGPT, but you don’t know what’s worth your time.",
+    "You have a service or program you’d love to grow, but not enough people know it exists.",
+    "You’ve been told to blog. Now you’re hearing you need to show up in ChatGPT, too. What’s actually worth your time?",
   ],
   /* DRAFT COPY: Whitney to confirm this sounds like her before launch. Facts are from her
      October 2026 emails (social media story, and her practitioner survey). */
@@ -62,7 +62,7 @@ export const COST = {
   heading: "When you’re hard to find, people book with whoever they find first.",
   body: [
     "People are already searching for the kind of help you offer. When your practice doesn’t show up, or your website doesn’t make the next step clear, those searches turn into consultations somewhere else.",
-    "That loss never appears on a report, which is what makes it so easy to put off.",
+    "That loss never shows up on a report, which is exactly why it’s so easy to put off.",
   ],
   // Real, anonymized findings from recent WBDS audits (sources noted for each).
   audits: {
@@ -111,7 +111,7 @@ export const POSSIBLE = {
   heading: "Most practices are <em>closer than they think.</em>",
   // SEO proposals in the audit folder: 6 of 8 practices.
   intro:
-    "Here’s the good news: in 6 of the last 8 practices we reviewed, the website already had enough trust with Google for new pages to rank quickly. It mostly needed a clear plan for what to publish and where.",
+    "In 6 of the last 8 practices we reviewed, the website already had enough trust with Google for new pages to rank quickly. It mostly needed a clear plan for what to publish and where.",
   quotes: [
     {
       // SEO Holly transcript
@@ -133,11 +133,11 @@ export const POSSIBLE = {
 
 export const APPROACH = {
   intro:
-    "You shouldn’t have to figure all of this out between client sessions. We can help you understand what needs attention and take on the work to improve it.",
+    "You shouldn’t have to figure all of this out between client sessions (your plate is full enough!). We’ll show you what needs attention, and we can take the work off your hands.",
   heading: "Start with the clients <em>you want more of.</em>",
   body: [
-    "SEO just means helping people find your business through search. But traffic on its own doesn’t pay the bills. What matters is what happens next: someone asks about working with you, books a consult, or joins your program.",
-    "That’s why we start with your business, not keywords. Which services do you want to grow? Who are they for? What states, territories, or regions can you work with clients in? Those answers guide what we recommend.",
+    "SEO means helping people find your business through search. For your practice, its value comes from what happens next: someone asks about working with you, books a consultation, or joins your program.",
+    "That’s why we begin with your business. Which services do you want to grow? Who are they for? What states, territories, or regions can you work with clients in? Those answers guide what we recommend.",
   ],
   pillars: [
     {
@@ -158,7 +158,7 @@ export const APPROACH = {
 export const SERVICES = {
   heading: "Here’s how we can help.",
   intro:
-    "People find practitioners in different ways: searching their town, typing a symptom into Google late at night, or asking ChatGPT who to see. Each service below focuses on one of those.",
+    "People find practitioners in all kinds of ways: searching their town, typing a symptom into Google at 11 pm, or asking ChatGPT who to see. Each service below focuses on one of those.",
   items: [
     {
       id: "local-seo",
@@ -181,9 +181,9 @@ export const SERVICES = {
       name: "Growth Content Engine",
       format: "Ongoing monthly",
       headline: "Be the answer they’re searching for.",
-      summary: "For practitioners with plenty to say and no time to write it.",
+      summary: "For practitioners who have plenty to say and little time to write.",
       points: [
-        "Topics drawn from the questions your clients ask you ALL the time",
+        "Topics tied to your services and your clients’ questions",
         "A conversation with you to capture your perspective",
         "Articles in your voice: you review, we write and publish",
         "A clear next step from every article to your services",
@@ -203,12 +203,12 @@ export const SERVICES = {
         "A check of the setup that helps search tools read your site",
       ],
       // Small print under the list.
-      note: "We can’t promise you a spot in AI answers (and no one honest can).",
+      note: "No one can guarantee placement in AI answers.",
       cta: "Ask about AI visibility",
     },
   ],
   // Shown under the cards: one main button for people who aren't sure which to pick.
-  unsure: "Not sure which one fits? <b>That’s what the free audit is for.</b>",
+  unsure: "Not sure which fits? <b>Your free audit will tell you.</b>",
   cta: "Get my free audit",
 };
 
@@ -242,7 +242,7 @@ export const STEPS = {
     },
     {
       title: "Discuss next steps on a strategy call",
-      body: "After your audit, you can book a live call with us to talk through how we’d approach SEO for your business, including costs and timelines. No pressure, no obligation.",
+      body: "After your audit, you’re invited to book a live strategy call with us to discuss how we would approach SEO for your business, including costs and timelines.",
     },
   ],
   cta: "Get my free audit",
@@ -255,13 +255,13 @@ export const TEAM = {
       name: "Whitney Bateson, MPH, RD",
       role: "Business & marketing strategy",
       image: "whitney.jpg",
-      bio: "Whitney is a dietitian turned marketer, so she gets both sides: the work you do with clients and the business you’re trying to grow. She makes sure every recommendation ties back to your goals and the people you want to reach.",
+      bio: "Whitney brings a dietitian’s understanding of health and nutrition work to marketing. She helps connect the recommendations to your business goals and the people you want to reach.",
     },
     {
       name: "Matt Kuncaitis",
       role: "SEO strategy & delivery",
       image: "matt.jpg",
-      bio: "Matt leads the website review and SEO work. He looks at how people are finding you, where your website could do more, and which fixes are worth doing first. He also helps turn what you know into helpful, authentic content your future clients are already searching for.",
+      bio: "Matt leads the website review and SEO work. He looks at how people find your services, where your website could do more, and which improvements are worth prioritizing. He also helps turn your knowledge into authentic, helpful content that your prospective clients are searching for.",
     },
   ],
   together:
@@ -279,11 +279,11 @@ export const FAQ = {
   items: [
     {
       q: "Do I need to understand SEO before we work together?",
-      a: "Not one bit! Tell us about your practice and what you’d like to grow. We’ll explain what we see, what we recommend, and why, in plain English.",
+      a: "No. Tell us about your practice and what you’d like to grow. We’ll explain what we see, what we recommend, and why, without expecting you to learn the technical side.",
     },
     {
       q: "Is this only for practices with a physical location?",
-      a: "Not at all. We also help virtual practices and businesses offering online programs or courses. The approach depends on who you serve, where you can work with them, and what you sell.",
+      a: "No. We can also help virtual practices and businesses offering online programs or courses. The approach depends on who you serve, where you can work with them, and what you sell.",
     },
     {
       q: "Are your SEO services limited to a specific geographic area?",
@@ -291,11 +291,11 @@ export const FAQ = {
     },
     {
       q: "Will you guarantee more bookings or a place in AI answers?",
-      a: "Nope. We focus on attracting the right people and making it easy for them to take the next step, but no one controls what Google and AI tools show, or how many clients you’ll get. If someone guarantees results like that, they’re either pulling your leg or using questionable SEO tactics that might give you a short-term bump but can hurt your site’s rankings in the long run.",
+      a: "No. We focus the work on attracting suitable prospects and making it easier for them to take action from your website, but we can’t promise a particular number of clients or control over what Google and AI tools display. If you find someone placing a guarantee like that on their work, they’re either pulling your leg, or resorting to some questionable SEO tactics that could boost results short-term, but that are likely unsustainable, and could actually hurt your site’s authority and rankings in the long run.",
     },
     {
       q: "How soon will I see results?",
-      a: "Honestly, it depends. We’ll talk through realistic expectations for your website on the strategy call. Publishing improvements is the first step; building visibility and inquiries takes time, and your starting point and competition affect how fast that happens.",
+      a: "We’ll discuss realistic expectations for your website and the recommended work on the strategy call. Publishing improvements is a first step; building search visibility and generating inquiries takes time. Your starting point and competition affect that progress.",
     },
     {
       q: "Do I have to sign up for ongoing work?",
@@ -307,7 +307,7 @@ export const FAQ = {
     },
     {
       q: "What’s included in the free audit?",
-      a: "A short, personal video covering the top opportunities we see for your website, based on your goals and services. It’s a first look, not a page-by-page inspection. You’ll get it within 7 days of requesting it. Then, if you’d like, you can meet with us live to talk through how we’d approach SEO for your business, including costs and timelines. There’s no obligation to move forward with our services.",
+      a: "A short, personal video covering the top opportunities we see for your website, based on your business goals and service offerings. It’s an initial review, rather than a complete inspection of every page. We’ll deliver the audit to you within 7 days of you requesting it. Then you’ll have the opportunity to meet with us live to discuss how we would approach SEO for your business, including costs and timelines. There is no obligation to move forward with our services if you request the audit or book a strategy call.",
     },
   ],
 };
@@ -315,6 +315,6 @@ export const FAQ = {
 export const CLOSER = {
   eyebrow: "Free video audit",
   heading: "Wondering what we’d recommend <em>for your website?</em>",
-  body: "Send us your website and tell us what you’d like it to do for your business. We’ll take a look and send you a short video with the best places to start.",
+  body: "Send us your website and tell us what you’d like it to do for your business. We’ll take a look and send you a short video with the top places to start.",
   cta: "Get my free audit",
 };
