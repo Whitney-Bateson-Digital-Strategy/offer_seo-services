@@ -9,6 +9,7 @@ import AuditMock from "./AuditMock.astro";
       <p class="eyebrow">{STEPS.eyebrow}</p>
       <h2 class="h2" set:html={STEPS.heading} />
     </div>
+    <div class="steps-body">
     <ol class="step-list">
       {STEPS.items.map((s, i) => (
         <li class="step">
@@ -19,6 +20,7 @@ import AuditMock from "./AuditMock.astro";
       ))}
     </ol>
     <AuditMock />
+    </div>
     <div class="center steps-cta"><Cta label={STEPS.cta} /></div>
   </div>
 </section>
