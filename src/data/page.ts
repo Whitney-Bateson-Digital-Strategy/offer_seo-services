@@ -39,10 +39,10 @@ export const PROBLEM = {
   intro:
     "Maybe referrals keep you busy some months, and other months you’re wondering where the next client is coming from. You have a website, but honestly? You’re not sure it’s doing much for you.",
   points: [
-    "You search for your own services and find other practices before yours.",
+    "You search for your services and see other practices before your own.",
     "People visit your website, but you rarely hear, “I found you on Google.”",
-    "You have a service or program you’d love to grow, but not enough people know it exists.",
-    "You’ve been told to blog. Now you’re hearing you need to show up in ChatGPT, too. What’s actually worth your time?",
+    "You have a service or program you’d love to grow, and too few people know it exists.",
+    "You’ve heard you should be blogging or showing up in ChatGPT, but you don’t know what’s worth your time.",
   ],
   /* DRAFT COPY: Whitney to confirm this sounds like her before launch. Facts are from her
      October 2026 emails (social media story, and her practitioner survey). */
@@ -50,7 +50,7 @@ export const PROBLEM = {
     body: [
       "I’m a dietitian too, so I know how this goes. You’re great at the work, and marketing gets squeezed in between client sessions.",
       "For years, I posted on social media hoping it would bring in clients (spoiler alert: it didn’t). And when I surveyed practitioners, nearly two-thirds told me they don’t have a consistent marketing system either.",
-      "Search is different. People are already looking for the help you offer. <b>You just need to be there when they look.</b> That’s what Matt and I want to help you with.",
+      "Search is different. People are already looking for the help you offer. <b>You just need to be there when they look.</b> That’s what we want to help you with.",
     ],
     signoff: "Whitney",
     image: "whitney.jpg",
@@ -62,7 +62,7 @@ export const COST = {
   heading: "When you’re hard to find, people book with whoever they find first.",
   body: [
     "People are already searching for the kind of help you offer. When your practice doesn’t show up, or your website doesn’t make the next step clear, those searches turn into consultations somewhere else.",
-    "That loss never shows up on a report, which is exactly why it’s so easy to put off.",
+    "That loss never appears on a report, which is what makes it so easy to put off.",
   ],
   // Real, anonymized findings from recent WBDS audits (sources noted for each).
   audits: {
@@ -133,7 +133,7 @@ export const POSSIBLE = {
 
 export const APPROACH = {
   intro:
-    "You shouldn’t have to figure all of this out between client sessions (your plate is full enough!). We’ll show you what needs attention, and we can take the work off your hands.",
+    "You shouldn’t have to figure all of this out between client sessions. We can help you understand what needs attention and take on the work to improve it.",
   heading: "Start with the clients <em>you want more of.</em>",
   body: [
     "SEO just means helping people find your business through search. But traffic on its own doesn’t pay the bills. What matters is what happens next: someone asks about working with you, books a consult, or joins your program.",
@@ -158,7 +158,7 @@ export const APPROACH = {
 export const SERVICES = {
   heading: "Here’s how we can help.",
   intro:
-    "People find practitioners in all kinds of ways: searching their town, typing a symptom into Google at 11 pm, or asking ChatGPT who to see. Each service below focuses on one of those.",
+    "People find practitioners in different ways: searching their town, typing a symptom into Google late at night, or asking ChatGPT who to see. Each service below focuses on one of those.",
   items: [
     {
       id: "local-seo",
