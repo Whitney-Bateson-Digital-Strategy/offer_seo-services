@@ -1,34 +1,13 @@
 ---
-// An illustration of what the free video audit looks like: a recorded walkthrough of the
-// practitioner's site with Matt narrating and notes on what to fix. Drawn in HTML/CSS.
+// A real free audit: the recorded walkthrough of a client's search data, with Matt narrating.
+// The browser bar in the image is blurred to hide the client's name and private tabs.
 import { asset } from "../lib";
 ---
 <figure class="audit-mock">
-  <div class="am-window" aria-hidden="true">
-    <div class="am-bar">
-      <span class="am-dots"><i></i><i></i><i></i></span>
-      <span class="am-url">yourpractice.com</span>
-    </div>
-    <div class="am-page">
-      <div class="am-nav"><span class="am-logo"></span><span class="am-links"><i></i><i></i><i></i></span></div>
-      <div class="am-hero">
-        <p class="am-h">Welcome to my practice</p>
-        <span class="am-line w80"></span><span class="am-line w60"></span>
-        <span class="am-btn">Contact</span>
-      </div>
-      <div class="am-cols"><span></span><span></span><span></span></div>
-
-      <span class="am-note n1"><b>1</b>Say what you do and where. Add your city to this heading.</span>
-      <span class="am-note n2"><b>2</b>Your booking button is easy to miss.</span>
-      <span class="am-note n3"><b>3</b>This page could rank for “eating disorder therapist near me.”</span>
-
-      <img class="am-face" src={asset("matt.jpg")} alt="" width="96" height="96" loading="lazy" />
-    </div>
-    <div class="am-player">
-      <span class="am-play"></span>
-      <span class="am-track"><span></span></span>
-      <span class="am-time">1:42 / 4:32</span>
-    </div>
-  </div>
-  <figcaption>An example of what you’ll receive: a short, personal video walking through your site, with the top things we’d fix first.</figcaption>
+  <img
+    src={asset("audit-example.webp")}
+    alt="A recorded audit video: Matt on camera walking through a Google Doc of a practice's search traffic findings, beside a printed services guide."
+    width="1144" height="806" loading="lazy" decoding="async"
+  />
+  <figcaption>From a real audit, with client details hidden: a recorded walkthrough of your search data and the top things we’d fix first.</figcaption>
 </figure>
