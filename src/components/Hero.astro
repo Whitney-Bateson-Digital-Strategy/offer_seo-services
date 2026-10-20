@@ -15,6 +15,7 @@ import Cta from "./Cta.astro";
         <Cta label={HERO.cta} />
         <a class="btn btn-s" href="#services">{HERO.secondaryCta}</a>
       </div>
+      <p class="hero-note" set:html={HERO.note} />
     </div>
     <div class="hero-photo">
       <img src={asset(HERO.image)} alt={HERO.imageAlt} width="1333" height="2000" fetchpriority="high" />

@@ -31,11 +31,6 @@ import SvcVisual from "./SvcVisual.astro";
       ))}
     </div>
 
-    <div class="svc-unsure">
-      <p set:html={SERVICES.unsure} />
-      <Cta label={SERVICES.cta} />
-    </div>
-
     <div class="included" id="included">
       <div class="inc-intro">
         <p class="eyebrow">{INCLUDED.eyebrow}</p>
@@ -44,10 +39,24 @@ import SvcVisual from "./SvcVisual.astro";
       </div>
       {INCLUDED.items.map((x) => (
         <div class="inc">
-          <h4 set:html={x.title} />
+          <span class="inc-icon" aria-hidden="true">
+            {x.icon === "chart" && (
+              <svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2" /></svg>
+            )}
+            {x.icon === "path" && (
+              <svg viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5" /><path d="M7.5 6H15a3.5 3.5 0 0 1 0 7H9a3.5 3.5 0 0 0 0 7h10" /><path d="m16 17 3 3-3 3" /></svg>
+            )}
+          </span>
+          <h4 set:html={x.name} />
           <p set:html={x.body} />
         </div>
       ))}
+    </div>
+
+    <!-- One main button at the end of the section, for people who aren't sure which service fits. -->
+    <div class="svc-unsure">
+      <p set:html={SERVICES.unsure} />
+      <Cta label={SERVICES.cta} />
     </div>
   </div>
 </section>
