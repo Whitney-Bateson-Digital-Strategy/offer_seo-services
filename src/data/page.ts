@@ -26,8 +26,9 @@ export const HERO = {
   body: [
     "When someone searches for the kind of help you offer, you want your practice to be part of the conversation.",
     "We help you show up on Google and get recommended by AI, with a focus on turning that attention into inquiries and new customers.",
-    "<b>Start with a free audit.</b> We’ll look at your website and show you the top opportunities to bring more clients your way.",
   ],
+  // Small print under the buttons.
+  note: "<b>Start with a free audit.</b> We’ll look at your website and show you the top opportunities to bring more clients your way.",
   cta: "Get my free audit",
   secondaryCta: "See how we help",
   image: "hero-practitioner.jpg",
@@ -83,11 +84,6 @@ export const COST = {
         stat: "22%",
         body: "of a dietitian’s search clicks for the whole year came from one blog post. Most of her other pages sat on page 2 of Google.",
       },
-      {
-        // SEO Adair transcript
-        stat: "148 pages",
-        body: "of a gut health dietitian’s website were blocked from Google’s results, until the audit found them.",
-      },
     ],
   },
   calculator: {
@@ -95,13 +91,17 @@ export const COST = {
     intro: "Adjust the numbers to match your practice for a rough idea.",
     // Starting values for the sliders. Matt should sanity-check these before launch.
     searches: { label: "Monthly searches for your services", value: 500, min: 50, max: 5000, step: 50 },
-    clientValue: { label: "What a new client is worth to you", value: 800, min: 100, max: 5000, step: 50 },
+    clientValue: {
+      label: "What a new client is worth to you",
+      hint: "Their total value: everything they spend with you over time, not just one session.",
+      value: 800, min: 100, max: 5000, step: 50,
+    },
     // Fixed assumptions shown in the small print under the result.
     clickRate: 0.08, // share of searchers who visit a practice that shows up well
     inquiryRate: 0.04, // share of visitors who get in touch
     closeRate: 0.4, // share of inquiries that become clients
     disclaimer:
-      "An illustration, not a forecast. It assumes 8% of searchers visit your site, 4% of visitors get in touch, and 4 in 10 inquiries become clients. Your audit looks at the real picture for your website.",
+      "An illustration, not a forecast. It assumes 8% of searchers visit your site, 4% of visitors get in touch, and 4 in 10 inquiries become clients, each worth the total value you set above. Your audit looks at the real picture for your website.",
   },
 };
 
@@ -218,11 +218,14 @@ export const INCLUDED = {
   intro: "We measure inquiries, not just visits.",
   items: [
     {
-      title: "A dashboard that tracks what counts",
+      // icon: "chart" or "path" (drawn in Services.astro)
+      icon: "chart",
+      name: "Inquiry tracking dashboard",
       body: "See your visits alongside contact form submissions and clicks to call, email, or book.",
     },
     {
-      title: "A clear path from visitor to client",
+      icon: "path",
+      name: "Website conversion review",
       body: "We fix confusing next steps, hard-to-find contact details, and unclear buttons, and flag anything bigger.",
     },
   ],

@@ -5,8 +5,7 @@ const c = COST.calculator;
 <section id="cost" class="cost">
   <div class="wrap cost-grid">
     <div class="cost-copy">
-      
-      <h2 set:html={COST.heading} />
+      <h2 class="h2" set:html={COST.heading} />
       {COST.body.map((p) => <p set:html={p} />)}
     </div>
 
@@ -22,12 +21,13 @@ const c = COST.calculator;
 
       <label class="calc-field">
         <span class="calc-label">{c.clientValue.label}<output data-out="value">${c.clientValue.value.toLocaleString("en-US")}</output></span>
+        <span class="calc-hint">{c.clientValue.hint}</span>
         <input type="range" name="value" min={c.clientValue.min} max={c.clientValue.max} step={c.clientValue.step} value={c.clientValue.value} />
       </label>
 
       <div class="calc-result" aria-live="polite">
         <div><b data-out="clients">–</b><span>new clients a year</span></div>
-        <div><b data-out="revenue">–</b><span>in yearly revenue</span></div>
+        <div><b data-out="revenue">–</b><span>total value of those new clients</span></div>
       </div>
       <p class="calc-note">{c.disclaimer}</p>
     </div>
@@ -38,7 +38,7 @@ const c = COST.calculator;
   </div>
 </section>
 
-<!-- The audit cards straddle the edge between this dark section and the light one below. -->
+<!-- The audit cards straddle the edge between this section and the one below. -->
 <div class="audits-bridge">
   <div class="wrap">
     <ul class="audits">
