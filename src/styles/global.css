@@ -2,12 +2,11 @@
   /* SEO palette */
   --anchor:     #02525d;   /* primary teal: headings, buttons on light, dark sections */
   --accent:     #e3f696;   /* lime: highlights, buttons on dark */
-  --soft-lime:  #f1f9cf;   /* light band background */
+  --soft-lime:  #f1f9cf;   /* small lime touches: pills, map, AI bubble */
   --neutral:    #eef5f6;   /* cool pale band background */
   --dark:       #013940;   /* deepest sections, footer */
   --orange:     #ff7f50;   /* Whitney's brand orange: small accents only */
-  --peach:      #fdeee6;   /* pale version of the brand orange */
-  --peach-md:   #fbdccd;
+  --peach:      #f9e4d9;   /* soft coral: a light version of the brand orange, used for one section only */
   --hi:         rgba(174,211,221,.22); /* pale blue tint, as on the DFY funnel page */
   --hi-md:      rgba(174,211,221,.48);
 
@@ -69,10 +68,6 @@ h1 em, h2 em{ font-style:italic; }
   color:var(--anchor); padding:0 .08em;
   background:linear-gradient(transparent 58%, var(--accent) 58%, var(--accent) 92%, transparent 92%);
   -webkit-box-decoration-break:clone; box-decoration-break:clone;
-}
-/* Lime on a soft-lime band disappears, so those sections use a white mark instead. */
-.approach .h2 em, .team .h2 em{
-  background:linear-gradient(transparent 58%, var(--paper) 58%, var(--paper) 92%, transparent 92%);
 }
 
 p{ margin:0 0 1.1em; }
@@ -168,8 +163,7 @@ ul{ list-style:none; }
 @media (max-width:900px){ .cards{ grid-template-columns:1fr; } }
 
 /* ---------------- hero ---------------- */
-/* Soft ombré from pale blue into peach. */
-.hero{ background:linear-gradient(120deg, var(--neutral) 0%, var(--neutral) 35%, var(--peach) 100%); color:var(--text); padding:88px 0; }
+.hero{ background:var(--neutral); color:var(--text); padding:88px 0; }
 .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
 .hero-photo{ position:relative; isolation:isolate; max-width:460px; justify-self:end; width:calc(100% - 20px); margin:0 20px 20px 0; }
 /* Rounded-square photo with a soft outline offset behind it. */
@@ -220,7 +214,7 @@ ul{ list-style:none; }
 @media (max-width:540px){ .whitney-note{ grid-template-columns:1fr; } }
 
 /* ---------------- cost of inaction ---------------- */
-.cost{ background:linear-gradient(180deg, var(--peach) 0%, #fdf5f0 100%); padding-bottom:150px; }
+.cost{ background:var(--peach); padding-bottom:150px; }
 .cost-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
 .cost .h2{ margin-bottom:1.2rem; }
 .audits-label{
@@ -273,40 +267,36 @@ ul{ list-style:none; }
 @media (max-width:540px){ .calc{ padding:26px 20px; } .calc-result b{ font-size:32px; } }
 
 /* ---------------- what's possible ---------------- */
-/* Client quotes as speech bubbles: three colors, middle one dropped for rhythm. */
+/* Client quotes as white speech bubbles, middle one dropped for rhythm. */
 .bubbles{ display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; max-width:var(--content); margin:0 auto; align-items:start; }
 .bubble-quote blockquote{
   position:relative; border-radius:24px 24px 24px 6px; padding:30px 28px 28px;
   font-family:var(--display); font-style:italic; font-size:20px; line-height:1.45;
-  background:var(--hi-md); color:var(--anchor); box-shadow:0 14px 34px rgba(1,57,64,.08);
+  background:var(--paper); color:var(--anchor); filter:drop-shadow(0 10px 22px rgba(1,57,64,.10));
 }
 .bubble-quote blockquote::before{
   content:'“'; display:block; font-style:normal; font-size:72px; line-height:.55; height:30px; color:var(--orange);
 }
 /* Tail at the bottom-left, pointing to who said it. */
 .bubble-quote blockquote::after{
-  content:''; position:absolute; left:0; bottom:-14px; border-left:22px solid var(--hi-md); border-bottom:14px solid transparent;
+  content:''; position:absolute; left:0; bottom:-14px; border-left:22px solid var(--paper); border-bottom:14px solid transparent;
 }
 .bubble-quote figcaption{
   margin:24px 0 0 6px;
   font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);
 }
-.bubble-quote:nth-child(2) blockquote{ background:var(--soft-lime); color:var(--anchor); }
-.bubble-quote:nth-child(2) blockquote::after{ border-left-color:var(--soft-lime); }
-.bubble-quote:nth-child(3) blockquote{ background:var(--peach); color:var(--anchor); }
-.bubble-quote:nth-child(3) blockquote::after{ border-left-color:var(--peach); }
 @media (min-width:901px){ .bubble-quote:nth-child(2){ margin-top:44px; } }
 @media (max-width:900px){ .bubbles{ grid-template-columns:1fr; max-width:560px; gap:24px; } }
 
 /* ---------------- approach ---------------- */
-.approach{ background:var(--soft-lime); }
-/* The approach statement opens the section, then leads straight into the heading below it. */
+.statement-band{ background:var(--anchor); text-align:center; padding:88px 0; }
+.statement-mark{ display:block; font-family:var(--display); font-size:80px; line-height:.6; height:36px; color:var(--accent); }
 .statement{
   max-width:32ch; margin:0 auto; text-wrap:balance;
-  font-family:var(--display); font-style:italic; font-size:clamp(26px, 3vw, 36px); line-height:1.4; color:var(--anchor);
+  font-family:var(--display); font-style:italic; font-size:clamp(26px, 3vw, 36px); line-height:1.4; color:#fff;
 }
-.approach-divider{ display:block; width:72px; height:4px; border-radius:4px; background:var(--anchor); opacity:.25; margin:44px auto 40px; }
-@media (max-width:768px){ .approach-divider{ margin:32px auto 28px; } }
+@media (max-width:768px){ .statement-band{ padding:64px 0; } }
+.approach{ background:var(--neutral); }
 .approach-body{ max-width:var(--measure); margin:0 auto; font-size:19px; }
 .pillars{ list-style:none; display:grid; grid-template-columns:repeat(3,1fr); gap:24px; max-width:var(--content); margin:0 auto; }
 .pillar{ background:var(--paper); border-radius:24px; padding:30px; box-shadow:var(--shadow); }
@@ -401,7 +391,7 @@ ul{ list-style:none; }
 
 /* ---------------- included with every project (slim band under the service cards) ---------------- */
 .included{
-  max-width:var(--content); margin:56px auto 0; background:linear-gradient(110deg, var(--peach) 0%, var(--neutral) 100%); border-radius:24px;
+  max-width:var(--content); margin:56px auto 0; background:var(--neutral); border-radius:24px;
   padding:32px 36px; display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:24px; align-items:stretch;
 }
 .inc-intro .eyebrow{ font-size:12px; margin-bottom:.5rem; }
@@ -450,7 +440,7 @@ ul{ list-style:none; }
 .audit-mock figcaption{ text-align:center; font-size:14px; line-height:1.5; color:var(--ink-soft); margin-top:14px; max-width:48ch; margin-inline:auto; }
 
 /* ---------------- team ---------------- */
-.team{ background:var(--soft-lime); }
+.team{ background:var(--neutral); }
 .host-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:var(--content); margin:0 auto; }
 .host{
   background:var(--paper); border-radius:24px; padding:32px; box-shadow:var(--shadow);

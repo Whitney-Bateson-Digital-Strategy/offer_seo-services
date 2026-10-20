@@ -1,12 +1,17 @@
 ---
 import { APPROACH } from "../data/page";
 ---
+<!-- The approach statement gets its own deep teal band: the one dark moment mid-page. -->
+<section class="statement-band">
+  <div class="wrap">
+    <span class="statement-mark" aria-hidden="true">“</span>
+    <p class="statement" set:html={APPROACH.intro} />
+  </div>
+</section>
+
 <section id="approach" class="approach">
   <div class="wrap">
     <div class="center">
-      
-      <p class="statement" set:html={APPROACH.intro} />
-      <span class="approach-divider" aria-hidden="true"></span>
       <h2 class="h2" set:html={APPROACH.heading} />
       <div class="approach-body">
         {APPROACH.body.map((p) => <p set:html={p} />)}
