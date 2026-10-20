@@ -3,7 +3,8 @@
   --anchor:     #02525d;   /* primary teal: headings, buttons on light, dark sections */
   --accent:     #e3f696;   /* lime: highlights, buttons on dark */
   --soft-lime:  #f1f9cf;   /* small lime touches: pills, map, AI bubble */
-  --neutral:    #eef5f6;   /* cool pale band background */
+  --neutral:    #f4f5f5;   /* near-white band background: no blue, no tan */
+  --pale-blue:  #eaf3f5;   /* hero only */
   --dark:       #013940;   /* deepest sections, footer */
   --orange:     #ff7f50;   /* Whitney's brand orange: small accents only */
   --peach:      #f9e4d9;   /* soft coral: a light version of the brand orange, used for one section only */
@@ -11,7 +12,7 @@
   --hi-md:      rgba(174,211,221,.48);
 
   /* working tones */
-  --bg:          #fcfdfd;  /* page background */
+  --bg:          #ffffff;  /* page background */
   --paper:       #ffffff;  /* cards */
   --text:        #1f2a2c;
   --ink-soft:    #5f6a6b;
@@ -163,7 +164,7 @@ ul{ list-style:none; }
 @media (max-width:900px){ .cards{ grid-template-columns:1fr; } }
 
 /* ---------------- hero ---------------- */
-.hero{ background:var(--neutral); color:var(--text); padding:88px 0; }
+.hero{ background:var(--pale-blue); color:var(--text); padding:88px 0; }
 .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
 .hero-photo{ position:relative; isolation:isolate; max-width:460px; justify-self:end; width:calc(100% - 20px); margin:0 20px 20px 0; }
 /* Rounded-square photo with a soft outline offset behind it. */
@@ -319,7 +320,7 @@ ul{ list-style:none; }
   display:grid; grid-row:span 4; grid-template-rows:subgrid; row-gap:0;
 }
 /* All three headers share one color so no service looks more important than the others. */
-.svc-head{ background:var(--hi-md); color:var(--text); padding:26px; display:flex; flex-direction:column; }
+.svc-head{ background:var(--paper); color:var(--text); padding:26px; border-top:4px solid var(--anchor); display:flex; flex-direction:column; }
 .svc-moment{ font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--anchor); margin:0; }
 .svc-head h3{ font-size:30px; line-height:1.15; color:var(--anchor); margin:.6rem 0 1.4rem; text-wrap:balance; }
 
@@ -327,7 +328,7 @@ ul{ list-style:none; }
 .viz{
   margin-top:auto; height:150px; border-radius:16px; background:var(--paper); color:var(--text);
   padding:12px; display:flex; flex-direction:column; gap:8px; overflow:hidden;
-  box-shadow:0 8px 20px rgba(1,57,64,.10); font-size:12px; line-height:1.35;
+  border:1px solid var(--rule); box-shadow:none; font-size:12px; line-height:1.35;
 }
 .viz strong{ color:var(--anchor); }
 .viz-line{ display:block; height:6px; border-radius:6px; background:var(--neutral); }
@@ -400,7 +401,7 @@ ul{ list-style:none; }
 .inc{ background:var(--paper); border-radius:16px; padding:22px 22px 24px; box-shadow:var(--shadow); }
 .inc-icon{
   display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:12px;
-  background:var(--hi-md); color:var(--anchor); margin-bottom:.8rem;
+  background:var(--soft-lime); color:var(--anchor); margin-bottom:.8rem;
 }
 .inc-icon svg{ width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .inc h4{ font-family:var(--body); font-weight:700; font-size:17px; color:var(--anchor); margin-bottom:.3rem; }
