@@ -217,17 +217,19 @@ ul{ list-style:none; }
 @media (max-width:540px){ .whitney-note{ grid-template-columns:1fr; } }
 
 /* ---------------- cost of inaction ---------------- */
-.cost{ background:var(--neutral); }
+.cost{ background:var(--neutral); padding-bottom:150px; }
 .cost-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
 .cost .h2{ margin-bottom:1.2rem; }
 .audits-label{
   font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--anchor);
-  text-align:center; margin:72px 0 24px;
+  text-align:center; margin:72px 0 0;
 }
+/* Pulled up so the cards hang across the bottom edge of the section. */
+.audits-bridge{ position:relative; z-index:2; margin-top:-110px; }
 .audits{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; max-width:var(--content); margin:0 auto; }
 .audit{
   background:var(--paper); border-radius:16px; padding:28px 24px 26px;
-  box-shadow:var(--shadow); border-top:4px solid var(--accent);
+  box-shadow:var(--shadow-md); border-top:4px solid var(--accent);
 }
 .audit b{
   display:block; font-family:var(--display); font-weight:400; font-size:46px; line-height:1.05;
@@ -235,8 +237,14 @@ ul{ list-style:none; }
 }
 .audit p{ font-size:15.5px; line-height:1.55; }
 .audits-note{ font-size:13px; color:var(--ink-soft); text-align:center; margin-top:20px; }
+.audits-bridge + section{ padding-top:72px; }
 @media (max-width:900px){ .audits{ grid-template-columns:1fr; gap:14px; max-width:560px; } }
-@media (max-width:540px){ .audits-label{ margin-top:56px; } }
+@media (max-width:540px){
+  .audits-label{ margin-top:56px; }
+  .cost{ padding-bottom:130px; }
+  .audits-bridge{ margin-top:-90px; }
+  .audits-bridge + section{ padding-top:56px; }
+}
 .calc{ background:var(--paper); color:var(--text); border-radius:24px; padding:36px; box-shadow:var(--shadow-md); }
 .calc h3{ font-size:26px; color:var(--anchor); margin-bottom:.3rem; }
 .calc-intro{ font-size:16px; color:var(--ink-soft); margin-bottom:1.6rem; }

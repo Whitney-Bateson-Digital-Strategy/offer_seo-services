@@ -35,6 +35,12 @@ const c = COST.calculator;
 
   <div class="wrap">
     <p class="audits-label">{COST.audits.heading}</p>
+  </div>
+</section>
+
+<!-- The audit cards straddle the edge between this section and the one below. -->
+<div class="audits-bridge">
+  <div class="wrap">
     <ul class="audits">
       {COST.audits.items.map((a) => (
         <li class="audit"><b>{a.stat}</b><p set:html={a.body} /></li>
@@ -42,7 +48,7 @@ const c = COST.calculator;
     </ul>
     <p class="audits-note">Findings from individual practices’ audits, shared anonymously. They describe where each practice started, not guaranteed results.</p>
   </div>
-</section>
+</div>
 
 <script>
   document.querySelectorAll<HTMLElement>("[data-calc]").forEach((calc) => {
