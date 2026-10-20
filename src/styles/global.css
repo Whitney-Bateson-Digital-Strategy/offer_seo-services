@@ -6,6 +6,8 @@
   --neutral:    #eef5f6;   /* cool pale band background */
   --dark:       #013940;   /* deepest sections, footer */
   --orange:     #ff7f50;   /* Whitney's brand orange: small accents only */
+  --peach:      #fdeee6;   /* pale version of the brand orange */
+  --peach-md:   #fbdccd;
   --hi:         rgba(174,211,221,.22); /* pale blue tint, as on the DFY funnel page */
   --hi-md:      rgba(174,211,221,.48);
 
@@ -166,7 +168,8 @@ ul{ list-style:none; }
 @media (max-width:900px){ .cards{ grid-template-columns:1fr; } }
 
 /* ---------------- hero ---------------- */
-.hero{ background:var(--neutral); color:var(--text); padding:88px 0; }
+/* Soft ombré from pale blue into peach. */
+.hero{ background:linear-gradient(120deg, var(--neutral) 0%, var(--neutral) 35%, var(--peach) 100%); color:var(--text); padding:88px 0; }
 .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
 .hero-photo{ position:relative; isolation:isolate; max-width:460px; justify-self:end; width:calc(100% - 20px); margin:0 20px 20px 0; }
 /* Rounded-square photo with a soft outline offset behind it. */
@@ -217,7 +220,7 @@ ul{ list-style:none; }
 @media (max-width:540px){ .whitney-note{ grid-template-columns:1fr; } }
 
 /* ---------------- cost of inaction ---------------- */
-.cost{ background:var(--neutral); padding-bottom:150px; }
+.cost{ background:linear-gradient(180deg, var(--peach) 0%, #fdf5f0 100%); padding-bottom:150px; }
 .cost-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
 .cost .h2{ margin-bottom:1.2rem; }
 .audits-label{
@@ -290,8 +293,8 @@ ul{ list-style:none; }
 }
 .bubble-quote:nth-child(2) blockquote{ background:var(--soft-lime); color:var(--anchor); }
 .bubble-quote:nth-child(2) blockquote::after{ border-left-color:var(--soft-lime); }
-.bubble-quote:nth-child(3) blockquote{ background:var(--neutral); color:var(--anchor); }
-.bubble-quote:nth-child(3) blockquote::after{ border-left-color:var(--neutral); }
+.bubble-quote:nth-child(3) blockquote{ background:var(--peach); color:var(--anchor); }
+.bubble-quote:nth-child(3) blockquote::after{ border-left-color:var(--peach); }
 @media (min-width:901px){ .bubble-quote:nth-child(2){ margin-top:44px; } }
 @media (max-width:900px){ .bubbles{ grid-template-columns:1fr; max-width:560px; gap:24px; } }
 
@@ -398,7 +401,7 @@ ul{ list-style:none; }
 
 /* ---------------- included with every project (slim band under the service cards) ---------------- */
 .included{
-  max-width:var(--content); margin:56px auto 0; background:var(--neutral); border-radius:24px;
+  max-width:var(--content); margin:56px auto 0; background:linear-gradient(110deg, var(--peach) 0%, var(--neutral) 100%); border-radius:24px;
   padding:32px 36px; display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:24px; align-items:stretch;
 }
 .inc-intro .eyebrow{ font-size:12px; margin-bottom:.5rem; }
