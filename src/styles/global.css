@@ -3,14 +3,14 @@
   --anchor:     #02525d;   /* primary teal: headings, buttons on light, dark sections */
   --accent:     #e3f696;   /* lime: highlights, buttons on dark */
   --soft-lime:  #f1f9cf;   /* light band background */
-  --neutral:    #efeae3;   /* warm band background */
+  --neutral:    #eef5f6;   /* cool pale band background */
   --dark:       #013940;   /* deepest sections, footer */
   --orange:     #ff7f50;   /* Whitney's brand orange: small accents only */
   --hi:         rgba(174,211,221,.22); /* pale blue tint, as on the DFY funnel page */
   --hi-md:      rgba(174,211,221,.48);
 
   /* working tones */
-  --bg:          #fbfaf7;  /* page background */
+  --bg:          #fcfdfd;  /* page background */
   --paper:       #ffffff;  /* cards */
   --text:        #1f2a2c;
   --ink-soft:    #5f6a6b;
@@ -166,12 +166,7 @@ ul{ list-style:none; }
 @media (max-width:900px){ .cards{ grid-template-columns:1fr; } }
 
 /* ---------------- hero ---------------- */
-/* Light cream band with a pale blue circle behind the photo, like the DFY funnel page. */
-.hero{ background:var(--neutral); color:var(--text); padding:88px 0; position:relative; overflow:hidden; isolation:isolate; }
-.hero::after{
-  content:''; position:absolute; z-index:-1; top:-120px; right:-140px; width:520px; height:520px;
-  border-radius:50%; background:var(--hi-md); pointer-events:none;
-}
+.hero{ background:var(--neutral); color:var(--text); padding:88px 0; }
 .hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
 .hero-photo{ position:relative; isolation:isolate; max-width:460px; justify-self:end; width:calc(100% - 20px); margin:0 20px 20px 0; }
 /* Rounded-square photo with a soft outline offset behind it. */
@@ -197,7 +192,6 @@ ul{ list-style:none; }
 .hero-note b{ color:var(--anchor); }
 @media (max-width:900px){
   .hero{ padding:56px 0; }
-  .hero::after{ display:none; }
   .hero-grid{ grid-template-columns:1fr; gap:40px; }
   .hero-photo{ order:-1; justify-self:start; max-width:520px; margin:0 14px 14px 0; }
   .hero-photo::after{ transform:translate(14px, 14px); border-radius:18px; }
@@ -209,12 +203,9 @@ ul{ list-style:none; }
 .pain-list{ max-width:var(--content); margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .pain-list li{
   background:var(--paper); border-radius:18px; box-shadow:var(--shadow);
-  padding:20px 24px 20px 58px; position:relative; font-size:18px;
+  padding:20px 24px 20px 56px; position:relative; font-size:18px;
 }
-.pain-list li::before{
-  content:''; position:absolute; left:24px; top:26px;
-  width:18px; height:18px; border-radius:50%; border:2px solid var(--anchor); background:var(--accent);
-}
+.pain-list li::before{ content:'✓'; position:absolute; left:26px; top:20px; color:var(--anchor); font-weight:700; }
 @media (max-width:720px){ .pain-list{ grid-template-columns:1fr; } }
 /* A short first-person note from Whitney under the list, set like a handwritten aside. */
 .whitney-note{
@@ -286,10 +277,9 @@ ul{ list-style:none; }
   content:''; position:absolute; left:0; bottom:-14px; border-left:22px solid var(--hi-md); border-bottom:14px solid transparent;
 }
 .bubble-quote figcaption{
-  margin:24px 0 0 6px; padding-left:18px; position:relative;
+  margin:24px 0 0 6px;
   font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);
 }
-.bubble-quote figcaption::before{ content:''; position:absolute; left:0; top:4px; width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 2px var(--anchor); }
 .bubble-quote:nth-child(2) blockquote{ background:var(--soft-lime); color:var(--anchor); }
 .bubble-quote:nth-child(2) blockquote::after{ border-left-color:var(--soft-lime); }
 .bubble-quote:nth-child(3) blockquote{ background:var(--neutral); color:var(--anchor); }
@@ -495,12 +485,6 @@ ul{ list-style:none; }
 .closer::before{
   content:""; position:absolute; inset:0; z-index:-2;
   background:linear-gradient(180deg, rgba(2,82,93,.86) 0%, rgba(1,57,64,.93) 100%);
-}
-/* Soft lime glow behind the call to action. */
-.closer::after{
-  content:""; position:absolute; z-index:-1; left:50%; bottom:-30%; width:min(1100px, 140%); aspect-ratio:2/1;
-  translate:-50% 0; border-radius:50%;
-  background:radial-gradient(closest-side, rgba(227,246,150,.18), rgba(241,249,207,.05) 60%, transparent);
 }
 @media (prefers-reduced-motion:reduce){ .closer-video{ display:none; } }
 @media (max-width:768px){ .closer{ padding:80px 0; } }
