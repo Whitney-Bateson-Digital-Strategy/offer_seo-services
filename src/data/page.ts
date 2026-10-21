@@ -72,17 +72,17 @@ export const COST = {
       {
         // SEO Audit_ Functional Vitality.pdf
         stat: "2,100",
-        body: "searches a month for “what causes extreme fatigue,” a question with almost no competition. The nutritionist we audited was mostly found by people who already knew her name.",
+        body: "monthly searches for a health question that a nutritionist could answer, but didn’t have content for. A missed opportunity to reach people searching for her expertise.",
       },
       {
         // SEO Audit_ Functional Vitality.pdf
         stat: "3 states",
-        body: "where Google was showing a Midwest practice to searchers: New York, Michigan, and Pennsylvania. Nothing on her site said where she worked.",
+        body: "where Google was mistakenly showing a practice because its website didn’t clearly communicate their service area. Potential clients in their actual service area weren’t being prioritized.",
       },
       {
         // SEO Audit_ Bone Health Dietitian.pdf (33 of 149 clicks)
         stat: "22%",
-        body: "of a dietitian’s search clicks for the whole year came from one blog post. Most of her other pages sat on page 2 of Google.",
+        body: "of a dietitian’s annual Google search clicks from a single blog post unaligned with her actual services. She was attracting visitors, but not necessarily potential clients.",
       },
     ],
   },
@@ -101,7 +101,7 @@ export const COST = {
     inquiryRate: 0.04, // share of visitors who get in touch
     closeRate: 0.4, // share of inquiries that become clients
     disclaimer:
-      "An illustration, not a forecast. It assumes 8% of searchers visit your site, 4% of visitors get in touch, and 4 in 10 inquiries become clients, each worth the total value you set above. Your audit looks at the real picture for your website.",
+      "An illustration, not a forecast. It assumes 8% of searchers visit your site, 4% of visitors get in touch, and 4 in 10 inquiries become clients, each worth the total value you set above. Actual results depend on your search rankings, competition, and how well your website converts visitors into inquiries. Your free audit will help us evaluate the opportunities specific to your practice.",
   },
 };
 
