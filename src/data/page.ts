@@ -4,10 +4,9 @@
    ===================================================================== */
 
 export const FORM = {
-  // Airtable share link for the audit request form,
-  // e.g. "https://airtable.com/appXXXXXXXXXXXXXX/shrXXXXXXXXXXXXXX".
-  // Every button on the page opens it. Leave "" until it's ready.
-  url: "",
+  // Airtable link for the audit request form (an interface form link, .../pag.../form,
+  // or a share link, .../shr...). Every button on the page opens it in a slide-out panel.
+  url: "https://airtable.com/app8n2l2G7IWv4Z4g/pagRjswRNgs094OL3/form",
   // Optional: the name of a field on the form that records which service someone
   // is interested in. If set, the buttons on the service cards pre-fill it
   // (e.g. "Local SEO"). Leave "" to skip pre-filling.

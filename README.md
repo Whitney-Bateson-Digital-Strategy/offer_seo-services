@@ -20,7 +20,7 @@ npm run preview  # serve the built site
 
 ## Airtable form
 
-Paste the audit form's share link (`https://airtable.com/app…/shr…`) into `FORM.url`. Until then, the buttons point to `#`.
+The audit form's link (`https://airtable.com/app…/pag…/form`, or a `shr…` share link) is in `FORM.url`. If it's blank, the buttons point to `#`.
 
 The page turns that link into Airtable's embed link and shows the form in a panel that slides in from the right (full screen on phones), built in `src/components/AuditForm.astro`. If JavaScript is off, the buttons open the form in a new tab instead.
 
