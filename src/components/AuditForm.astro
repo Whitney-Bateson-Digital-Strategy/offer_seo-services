@@ -1,0 +1,32 @@
+---
+// The audit request form, embedded from Airtable in a panel that slides in from the right
+// (full screen on phones). Any button with data-audit-form opens it.
+import { FORM } from "../data/page";
+---
+{FORM.url && (
+  <dialog class="form-panel" id="audit-form" aria-labelledby="audit-form-title">
+    <div class="form-panel-head">
+      <p id="audit-form-title">Request your free audit</p>
+      <button type="button" class="form-panel-close" aria-label="Close" data-close>×</button>
+    </div>
+    <iframe title="Free audit request form" loading="lazy"></iframe>
+  </dialog>
+)}
+
+<script>
+  const panel = document.getElementById("audit-form") as HTMLDialogElement | null;
+  if (panel) {
+    const frame = panel.querySelector("iframe")!;
+    document.addEventListener("click", (e) => {
+      const link = (e.target as Element).closest<HTMLAnchorElement>("[data-audit-form]");
+      if (!link) return;
+      e.preventDefault();
+      // Only reload the form when switching services, so a half-filled form isn't lost.
+      if (frame.getAttribute("src") !== link.dataset.auditForm) frame.src = link.dataset.auditForm!;
+      panel.showModal();
+    });
+    panel.querySelector("[data-close]")!.addEventListener("click", () => panel.close());
+    // Close when the dimmed area outside the panel is clicked.
+    panel.addEventListener("click", (e) => { if (e.target === panel) panel.close(); });
+  }
+</script>

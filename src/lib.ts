@@ -8,3 +8,7 @@ export const formUrl = (service?: string) => {
   const sep = FORM.url.includes("?") ? "&" : "?";
   return `${FORM.url}${sep}prefill_${encodeURIComponent(FORM.servicePrefillField)}=${encodeURIComponent(service)}`;
 };
+
+// The same form as an embeddable page: airtable.com/app…/shr… becomes airtable.com/embed/app…/shr….
+export const formEmbedUrl = (service?: string) =>
+  formUrl(service).replace(/^https:\/\/airtable\.com\/(?!embed\/)/, "https://airtable.com/embed/");

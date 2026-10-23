@@ -49,8 +49,8 @@ export const PROBLEM = {
      October 2026 emails (social media story, and her practitioner survey). */
   note: {
     body: [
-      "I’m a dietitian too, so I know how this goes. You’re great at the work, and marketing gets squeezed in between client sessions.",
-      "For years, I posted on social media hoping it would bring in clients (spoiler alert: it didn’t). And when I surveyed practitioners, nearly two-thirds told me they don’t have a consistent marketing system either.",
+      "Before I was a marketer, I was a dietitian. I know that your clients are your priority, so marketing often gets squeezed in between sessions.",
+      "For years, I posted on social media hoping it would bring in more business (spoiler alert: it didn’t). And when I surveyed practitioners, nearly two-thirds told me they don’t have a consistent marketing system either.",
       "Search is different. People are already looking for the help you offer. <b>You just need to be there when they look.</b> That’s what we want to help you with.",
     ],
     signoff: "Whitney",
@@ -133,7 +133,7 @@ export const POSSIBLE = {
 
 export const APPROACH = {
   intro:
-    "You shouldn’t have to figure all of this out between client sessions (your plate is full enough!). We’ll show you what needs attention, and we can take the work off your hands.",
+    "You shouldn’t have to figure all of this out between client sessions – your plate is full enough! We’ll show you what needs attention, and we can take the work off your hands.",
   heading: "Start with the clients <em>you want more of.</em>",
   body: [
     "SEO means helping people find your business through search. For your practice, its value comes from what happens next: someone asks about working with you, books a consultation, or joins your program.",
@@ -181,10 +181,9 @@ export const SERVICES = {
       name: "Growth Content Engine",
       format: "Ongoing monthly",
       headline: "Be the answer they’re searching for.",
-      summary: "For practitioners who have plenty to say and little time to write.",
+      summary: "For practices that want to be known for their specialty, by the clients who need them, whether they’re nearby or across the world.",
       points: [
         "Topics tied to your services and your clients’ questions",
-        "A conversation with you to capture your perspective",
         "Articles in your voice: you review, we write and publish",
         "A clear next step from every article to your services",
       ],
@@ -196,7 +195,7 @@ export const SERVICES = {
       name: "AI Visibility",
       format: "One-time project",
       headline: "Be the practice AI can recommend.",
-      summary: "For practices that want their existing website ready for ChatGPT and Google’s AI search features.",
+      summary: "For practices that want to be the name ChatGPT and Google’s AI suggest when someone asks who can help.",
       points: [
         "Clearer details on who you help and what you offer",
         "Answers to common client questions, written with your input",
@@ -215,13 +214,13 @@ export const SERVICES = {
 export const INCLUDED = {
   eyebrow: "Included with every project",
   heading: "Traffic only matters if it turns into clients.",
-  intro: "We measure inquiries, not just visits.",
+  intro: "We track the clicks that show someone wants to work with you, not just visits.",
   items: [
     {
       // icon: "chart" or "path" (drawn in Services.astro)
       icon: "chart",
-      name: "Inquiry tracking dashboard",
-      body: "See your visits alongside contact form submissions and clicks to call, email, or book.",
+      name: "Conversion tracking dashboard",
+      body: "See your visits alongside the clicks that signal interest: to your contact page, phone number, email, or booking link.",
     },
     {
       icon: "path",
