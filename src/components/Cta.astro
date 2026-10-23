@@ -1,6 +1,7 @@
 ---
-// A button that opens the audit request form. Until the form link is set it points to "#".
-import { formUrl } from "../lib";
+// A button that opens the audit request form in the slide-out panel (AuditForm.astro).
+// Without JavaScript it falls back to opening the form in a new tab. Until the form link is set it points to "#".
+import { formUrl, formEmbedUrl } from "../lib";
 
 interface Props {
   label: string;
@@ -12,5 +13,5 @@ const url = formUrl(service);
 const cls = variant === "t" ? ["text-cta"] : ["btn", `btn-${variant}`];
 ---
 {url
-  ? <a class:list={cls} href={url} target="_blank" rel="noopener">{label}</a>
+  ? <a class:list={cls} href={url} target="_blank" rel="noopener" data-audit-form={formEmbedUrl(service)}>{label}</a>
   : <a class:list={cls} href="#" title="Add the Airtable form link in src/data/page.ts">{label}</a>}
